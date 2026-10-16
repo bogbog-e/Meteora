@@ -55,12 +55,12 @@ main{max-width:1240px;margin:auto;padding:36px 22px 48px}.intro{margin-bottom:25
 .home-right-stack{display:flex;flex-direction:column;min-width:0;gap:10px;padding-top:0}
 .reminder-home-widget{height:174px;border-radius:25px;background:rgba(27,27,39,.83);color:#f1eff6;padding:10px 9px 9px;display:flex;flex-direction:column;box-shadow:0 4px 15px rgba(48,38,66,.12);overflow:hidden}
 .reminder-home-title{display:flex;align-items:center;justify-content:space-between;font-size:9px;flex-shrink:0}
-.reminder-home-title strong{font-weight:750}
+.reminder-home-title strong{font-weight:750}.reminder-open-title{width:auto!important;flex:1;border:0;border-radius:0;background:transparent;color:inherit;font-size:inherit;font-weight:800;padding:2px 0;text-align:left}
 .reminder-home-title button{border:0;border-radius:50%;width:23px;height:23px;background:#ffffff1f;color:#fff;font-size:17px;line-height:1}
 .home-reminder-list{font-size:8px;line-height:1.45;overflow:hidden;margin-top:8px;display:flex;flex-direction:column;gap:9px}
 .home-reminder-item{display:flex;align-items:flex-start;gap:5px;color:#efedf6;border:0;background:transparent;padding:0;text-align:left;width:100%;font-size:8px;line-height:1.45}
 .home-reminder-item i{height:5px;width:5px;flex-shrink:0;border-radius:50%;background:#d1b8f5;margin-top:3px}
-.home-reminder-item span{min-width:0;overflow-wrap:anywhere}
+.home-reminder-item span{min-width:0;overflow-wrap:anywhere}.home-reminder-item input{accent-color:#d1b8f5;width:11px;height:11px;flex:0 0 11px;margin:2px 0 0}.home-reminder-item.is-done span{text-decoration:line-through;opacity:.58}.home-reminder-item.is-done input{accent-color:#73c7ad}
 .no-reminders{display:block;text-align:center;margin:auto 0;color:#cfceda;font-size:8px;padding:25px 2px}
 .quick-home-apps{display:flex;justify-content:space-around;align-items:flex-start;gap:6px;padding:0 1px}
 .quick-home-launch{background:transparent;border:0;display:flex;align-items:center;flex-direction:column;gap:4px;min-width:0;color:#f7f5fc;text-shadow:0 1px 3px #7b6b912e;font-size:7px;padding:0}
@@ -100,6 +100,25 @@ main{max-width:1240px;margin:auto;padding:36px 22px 48px}.intro{margin-bottom:25
 @media(max-width:400px){.stage{min-height:695px}.phone-wrap{width:91%}.home-view{padding:49px 9px 27px}.home-dashboard{height:247px;grid-template-columns:1.12fr .88fr}.reminder-home-widget{height:169px}.calendar-home-grid{grid-auto-rows:23px}.mail-home-widget{height:127px}.home-page-dots{margin-bottom:20px}}
 
 
+/* Wallpaper settings app */
+.quick-settings-icon{background:linear-gradient(145deg,#bda9f5,#7675d8);display:grid;place-items:center;box-shadow:0 3px 9px #7568a929}
+.quick-settings-icon svg{width:24px;height:24px;filter:drop-shadow(0 1px 1px #0002)}
+.settings-page{padding:12px;background:#f6f6fb;color:#252735}
+.settings-intro{font-size:9px;line-height:1.7;color:#7d8191;margin:1px 2px 12px}
+.wallpaper-setting-card{background:#fff;border:1px solid #e8e9f0;border-radius:15px;padding:12px;margin-bottom:11px;box-shadow:0 2px 8px #27294b06}
+.wallpaper-setting-head{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:9px}
+.wallpaper-setting-head strong{font-size:10px;color:#323443}
+.wallpaper-setting-head small{font-size:7px;color:#9a9dac}
+.wallpaper-preview{height:110px;border-radius:11px;background:linear-gradient(135deg,#86a5c5,#a9b5d1 32%,#c3b5d4 63%,#d2a6bb);background-size:cover;background-position:center;border:1px solid #ececf4;position:relative;overflow:hidden}
+.wallpaper-preview:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.13));pointer-events:none}
+.wallpaper-setting-actions{display:flex;gap:7px;margin-top:9px}
+.wallpaper-setting-actions label,.wallpaper-setting-actions button{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:5px;min-height:32px;border:1px solid #e3e4ed;border-radius:9px;background:#fff;color:#565b72;font-size:8px;font-weight:800;padding:7px;text-align:center;cursor:pointer}
+.wallpaper-setting-actions label{background:#f0efff;color:#5c5fc0;border-color:#e3e1ff}
+.wallpaper-setting-actions input{display:none}
+.wallpaper-setting-actions button:active,.wallpaper-setting-actions label:active{transform:scale(.98)}
+.settings-scope-note{padding:10px 11px;border-radius:11px;background:#fff3df;color:#87672f;font-size:8px;line-height:1.65;border:1px solid #f5e7c9;margin:3px 0 8px}
+.settings-saved{font-size:8px;color:#4a9971;text-align:center;padding:2px 0 5px}
+
 /* Interactive visitor-side phone dialer */
 .phone-app{padding:0 12px 12px;background:#f8f8fc}.phone-tabs{display:flex;gap:6px;padding:10px 2px;border-bottom:1px solid #e9eaf1}.phone-tab{flex:1;border:0;border-radius:10px;padding:9px;background:transparent;color:#777b8a;font-size:9px;font-weight:800}.phone-tab.active{background:#e9eaff;color:#575fc9}.phone-tab span{font-size:8px}.dial-display{text-align:center;padding:22px 0 15px}.dial-number{font-size:20px;font-weight:650;letter-spacing:.04em;min-height:26px;overflow-wrap:anywhere;color:#282a36}.dial-caption{font-size:7px;color:#9699a6;margin-top:7px}.dial-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px 17px;max-width:218px;margin:0 auto}.dial-key{height:43px;border:0;border-radius:50%;background:#fff;box-shadow:0 2px 7px #2427440a;color:#292b37;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px}.dial-key strong{font-size:17px;font-weight:500;line-height:1}.dial-key small{font-size:6px;letter-spacing:.08em;color:#8e91a0;height:7px}.dial-actions{display:flex;align-items:center;justify-content:center;gap:24px;padding:15px 0 13px}.dial-delete{width:35px;height:35px;border:0;background:transparent;color:#777b8a;font-size:20px}.dial-call{width:48px;height:48px;border:0;border-radius:50%;background:#24b783;color:#fff;font-size:22px;box-shadow:0 5px 12px #24b78335}.phone-suggest{border-top:1px solid #e8e9f0;padding-top:10px;display:flex;flex-direction:column;gap:5px}.phone-suggest>span{font-size:8px;color:#8d91a0;font-weight:800;margin-bottom:2px}.phone-suggest button{border:0;background:#fff;border-radius:9px;padding:8px 9px;text-align:left;font-size:9px;color:#303341}.phone-suggest small{float:right;color:#a0a3af;font-size:7px}.call-log-list{min-height:150px}.call-log-row{display:flex;align-items:center;gap:9px;width:100%;padding:12px 2px;border:0;border-bottom:1px solid #e9eaf0;background:transparent;text-align:left}.call-log-icon{width:27px;height:27px;display:grid;place-items:center;border-radius:50%;background:#fbe8e8;color:#d66b78;font-size:14px}.call-log-icon.outgoing{background:#e2f7ef;color:#25a77b}.call-log-copy{flex:1;min-width:0}.call-log-copy strong{display:block;font-size:9px;color:#343643}.call-log-copy small{display:block;font-size:7px;color:#8d91a0;margin-top:4px}.call-log-type{font-size:7px;color:#9b9eaa}.clear-call-log{margin:12px 0;width:100%;padding:9px;border:1px solid #e5e6ef;border-radius:9px;background:#fff;color:#777b8b;font-size:8px}.call-screen{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;background:linear-gradient(180deg,#f3f1fb,#faf9fc);padding:20px}.call-avatar{width:66px;height:66px;border-radius:50%;display:grid;place-items:center;background:#dddaf8;color:#5c58a1;font-size:27px;font-weight:800;box-shadow:0 8px 24px #8d88c72b}.call-screen h3{font-size:15px;margin:17px 0 4px}.call-screen p{font-size:9px;color:#898d9b;margin:0}.call-status{font-size:10px;color:#656b83;margin-top:24px}.call-disclaimer{margin-top:10px!important;font-size:7px!important}.end-call{margin-top:30px;width:49px;height:49px;border:0;border-radius:50%;background:#ed5a68;color:#fff;font-size:20px;transform:rotate(135deg)}.end-call-label{font-size:8px;color:#7e8290;margin-top:7px}
 
@@ -135,12 +154,152 @@ main{max-width:none;width:100%;height:100dvh;margin:0;padding:0}
 .unlocking{animation:unlockMotion .38s ease-in forwards!important;transform-origin:center}
 @keyframes unlockMotion{to{opacity:0;transform:translateY(-18%) scale(1.05);filter:blur(5px)}}
 
+
+
+/* Meteora layout refinement: center the device in the whole viewport and let
+   the home widgets use more of the screen instead of staying at tiny fixed sizes. */
+html,body{width:100%;height:100%;min-height:100%;margin:0;overflow:hidden;background:#171622}
+main{width:100vw!important;max-width:none!important;height:100dvh;margin:0!important;padding:0!important}
+.workspace{display:block!important;width:100vw!important;max-width:none!important;height:100dvh;margin:0!important}
+.preview-panel{width:100vw!important;max-width:none!important;height:100dvh;margin:0!important;border:0!important;border-radius:0!important;box-shadow:none!important;overflow:hidden;background:#171622}
+.stage{width:100vw!important;height:100dvh!important;min-height:0!important;margin:0!important;padding:0!important;display:grid;place-items:center;background:radial-gradient(ellipse at 50% 44%,#c9c5d8 0%,#777589 49%,#24232f 100%)}
+.phone-wrap{width:auto!important;height:min(94dvh,940px)!important;aspect-ratio:.462!important;max-width:96vw!important;margin:0 auto!important}
+.phone{width:100%;height:100%;max-height:none;aspect-ratio:auto;border-radius:clamp(34px,3.8vh,44px);padding:6px}
+.screen{width:100%;height:100%;border-radius:clamp(27px,3.1vh,36px)}
+.home-view{padding:clamp(48px,5.2dvh,64px) clamp(11px,1.4vw,16px) clamp(24px,3dvh,34px)}
+.home-ambient-header{height:clamp(66px,7.4dvh,82px)}
+.moon-mark{font-size:clamp(34px,4.1dvh,43px)}
+.weather-copy strong{font-size:clamp(15px,1.7dvh,18px)}
+.weather-copy small{font-size:clamp(8px,1.05dvh,10px)}
+.home-date-meta span{font-size:clamp(8px,1.05dvh,10px)}
+.home-date-meta strong{font-size:clamp(13px,1.55dvh,16px)}
+.home-dashboard{height:clamp(258px,30dvh,318px);grid-template-columns:minmax(0,1.13fr) minmax(0,.87fr);gap:clamp(5px,.8vw,9px);margin-top:clamp(2px,.5dvh,6px)}
+.calendar-home-widget{padding:clamp(8px,1.1dvh,12px) 3px 5px}
+.calendar-home-title{height:clamp(20px,2.3dvh,25px);margin-bottom:clamp(6px,.9dvh,10px)}
+.calendar-home-title strong{font-size:clamp(12px,1.45dvh,15px)}
+.calendar-home-week span{font-size:clamp(8px,1.05dvh,10px);height:clamp(18px,2dvh,22px)}
+.calendar-home-grid{grid-auto-rows:clamp(22px,2.45dvh,27px)}
+.calendar-home-day{width:clamp(19px,2.1dvh,23px);height:clamp(19px,2.1dvh,23px);font-size:clamp(8px,1.05dvh,10px);border-radius:7px}
+.home-right-stack{gap:clamp(8px,1.2dvh,12px)}
+.reminder-home-widget{height:auto;flex:1;min-height:0;border-radius:clamp(20px,2.5dvh,27px);padding:clamp(10px,1.15dvh,13px) clamp(9px,1.1vw,12px)}
+.reminder-home-title{font-size:clamp(9px,1.15dvh,11px)}
+.reminder-home-title button{width:clamp(23px,2.7dvh,28px);height:clamp(23px,2.7dvh,28px);font-size:clamp(17px,1.9dvh,20px)}
+.home-reminder-list{font-size:clamp(8px,1.08dvh,10px);line-height:1.55;margin-top:clamp(7px,1dvh,11px);gap:clamp(8px,1.05dvh,11px)}
+.home-reminder-item{font-size:clamp(8px,1.08dvh,10px);line-height:1.5;gap:6px}
+.home-reminder-item i{width:5px;height:5px;margin-top:4px}
+.quick-home-apps{gap:7px;padding:0 2px 2px}
+.quick-home-icon{width:clamp(42px,4.8dvh,51px);height:clamp(42px,4.8dvh,51px);border-width:clamp(5px,.65vh,6px)}
+.quick-home-icon svg{width:clamp(25px,2.9dvh,30px);height:clamp(25px,2.9dvh,30px)}
+.quick-home-launch{font-size:clamp(7px,.9dvh,9px);gap:5px}
+.mail-home-widget{height:clamp(150px,17dvh,184px);margin-top:clamp(10px,1.4dvh,15px);padding:clamp(11px,1.4dvh,15px) clamp(11px,1.2vw,14px) 9px;border-radius:clamp(21px,2.6dvh,27px)}
+.mail-account-button{font-size:clamp(8px,1dvh,10px)}
+.mail-widget-tools{gap:clamp(7px,.8vw,10px)}
+.mail-widget-tools button{font-size:clamp(17px,1.9dvh,20px)}
+.mail-home-content{font-size:clamp(10px,1.2dvh,13px);padding:12px 7px 6px;line-height:1.6}
+#homeGreeting{font-size:clamp(10px,1.2dvh,13px);font-weight:650;line-height:1.6}
+.home-bottom-area{margin-top:auto}
+.home-page-dots{margin-bottom:clamp(17px,2.4dvh,25px);gap:clamp(9px,1.1dvh,12px)}
+.home-page-dots i{width:clamp(8px,.9dvh,10px)}
+.dock{margin:0 clamp(6px,.8vw,9px);padding:7px 8px}
+.dock-circle{width:clamp(45px,5.1dvh,54px);height:clamp(45px,5.1dvh,54px)}
+.dock-circle svg{width:clamp(23px,2.7dvh,29px);height:clamp(23px,2.7dvh,29px)}
+@media(max-width:600px){
+  .stage{width:100vw!important;height:100dvh!important;background:#000}
+  .phone-wrap{width:100vw!important;height:100dvh!important;max-width:none!important;aspect-ratio:auto!important}
+  .phone{border:0;border-radius:0;padding:0;background:#000;box-shadow:none}
+  .screen{border-radius:0}
+  .home-view{padding:clamp(48px,6dvh,62px) 12px clamp(24px,3.2dvh,32px)}
+  .home-dashboard{height:clamp(250px,31dvh,310px)}
+  .mail-home-widget{height:clamp(145px,17dvh,180px)}
+}
+@media(max-height:740px) and (min-width:601px){
+  .phone-wrap{height:94dvh!important}
+  .home-view{padding-top:45px;padding-bottom:20px}
+  .home-dashboard{height:clamp(225px,29dvh,260px)}
+  .mail-home-widget{height:clamp(128px,16dvh,145px);margin-top:8px}
+}
+
+
+/* In-world incoming calls and messages */
+.incoming-banner-wrap{position:absolute;z-index:85;top:32px;left:8px;right:8px;display:flex;gap:5px;align-items:stretch;animation:incomingDrop .32s cubic-bezier(.18,.75,.25,1);}
+.incoming-banner{flex:1;min-width:0;display:flex;align-items:center;gap:9px;text-align:left;border:1px solid rgba(255,255,255,.64);border-radius:15px;padding:10px 11px;background:rgba(250,249,255,.96);box-shadow:0 9px 30px rgba(8,12,28,.23);color:#25283a;backdrop-filter:blur(18px);cursor:pointer;}
+.incoming-banner-icon{height:32px;width:32px;flex:0 0 32px;border-radius:11px;display:grid;place-items:center;background:linear-gradient(145deg,#7d83e8,#6763cb);color:#fff;font-weight:900;font-size:13px;}
+.incoming-banner-copy{min-width:0;flex:1;display:block;}
+.incoming-banner-copy strong{font-size:9px;line-height:1.25;display:flex;justify-content:space-between;gap:5px;align-items:center;}
+.incoming-banner-copy strong small{font-size:7px;color:#777b8c;font-weight:500;white-space:nowrap;}
+.incoming-banner-copy p{font-size:9px;line-height:1.35;margin:4px 0 0;color:#4c5060;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;}
+.incoming-banner-close{width:24px;flex:0 0 24px;border:1px solid #ffffff77;border-radius:11px;background:rgba(248,247,253,.93);color:#6c7081;font-size:16px;cursor:pointer;}
+@keyframes incomingDrop{from{transform:translateY(-16px);opacity:0}to{transform:translateY(0);opacity:1}}
+.incoming-call-overlay{position:absolute;z-index:100;inset:0;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:32px 18px 42px;box-sizing:border-box;text-align:center;color:#fff;background:radial-gradient(ellipse at 50% 20%,rgba(143,146,210,.75),transparent 50%),linear-gradient(180deg,#222b4a 0%,#464365 48%,#171b2b 100%);animation:callFadeIn .3s ease-out;}
+.incoming-call-overlay:before{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(9,13,28,.03),rgba(9,13,28,.38));}
+.incoming-call-inner{position:relative;z-index:1;width:100%;display:flex;flex-direction:column;align-items:center;min-height:0;}
+.incoming-call-kicker{font-size:9px;letter-spacing:.11em;text-transform:uppercase;color:#e1e2f2;margin:6px 0 22px;}
+.incoming-call-avatar{height:77px;width:77px;border-radius:50%;display:grid;place-items:center;margin:0 auto 15px;background:linear-gradient(145deg,#e8e4fa,#b8b2de);border:1px solid #ffffff75;color:#514a78;font-size:30px;font-weight:800;box-shadow:0 0 0 9px rgba(255,255,255,.08),0 0 0 18px rgba(255,255,255,.035);animation:callPulse 1.8s ease-in-out infinite;}
+.incoming-call-name{font-size:22px;font-weight:750;letter-spacing:-.04em;margin:0 0 5px;}
+.incoming-call-subtitle{font-size:10px;color:#d9d9ec;margin:0 0 9px;}
+.incoming-call-state{font-size:10px;color:#e4e2f1;margin:12px 0 0;}
+.incoming-call-actions{display:flex;justify-content:center;gap:42px;margin-top:auto;padding-top:32px;}
+.call-action{display:flex;flex-direction:column;align-items:center;gap:9px;background:transparent;border:0;color:#fff;font-size:9px;cursor:pointer;}
+.call-action-circle{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;color:#fff;font-size:22px;box-shadow:0 7px 21px rgba(0,0,0,.2);}
+.call-decline .call-action-circle{background:#e95465;}
+.call-answer .call-action-circle{background:#24bd86;}
+.incoming-call-foot{position:absolute;bottom:7px;left:0;right:0;font-size:7px;color:#d2d1e4;}
+@keyframes callPulse{0%,100%{box-shadow:0 0 0 9px rgba(255,255,255,.07),0 0 0 18px rgba(255,255,255,.025)}50%{box-shadow:0 0 0 13px rgba(255,255,255,.09),0 0 0 25px rgba(255,255,255,.025)}}
+@keyframes callFadeIn{from{opacity:0;transform:scale(1.015)}to{opacity:1;transform:scale(1)}}
+.incoming-call-transcript{width:100%;max-height:155px;overflow:auto;text-align:left;margin:23px 0 0;padding:12px;border-radius:16px;box-sizing:border-box;background:rgba(17,20,38,.38);border:1px solid rgba(255,255,255,.14);font-size:10px;line-height:1.65;white-space:pre-line;color:#f4f3fb;}
+.call-response-list{width:100%;display:flex;flex-direction:column;gap:8px;margin-top:14px;}
+.call-response-btn{width:100%;border:1px solid rgba(255,255,255,.4);border-radius:13px;padding:10px 9px;background:rgba(255,255,255,.13);color:#fff;text-align:left;font-size:9px;line-height:1.4;cursor:pointer;}
+.call-response-btn:active{background:rgba(255,255,255,.25);}
+.incoming-call-end{margin-top:16px;padding:9px 18px;border:0;border-radius:24px;background:#e95465;color:#fff;font-size:10px;font-weight:800;cursor:pointer;}
+.incoming-call-calltime{font-size:10px;color:#efedf8;margin-top:8px;}
+@media(max-width:800px){.incoming-banner-wrap{top:28px}.incoming-banner{padding:9px}.incoming-call-overlay{padding-left:15px;padding-right:15px}.incoming-call-transcript{max-height:125px}.call-response-btn{padding:8px}}
+
+</style>
+<style>
+/* Expanded real-phone app set */
+.weather-mini{cursor:pointer;pointer-events:auto}.weather-mini:focus-visible{outline:2px solid #fff;border-radius:9px;outline-offset:4px}
+.weather-cards{padding:12px;background:#f6f7fb;display:flex;flex-direction:column;gap:10px}
+.weather-city-card{background:linear-gradient(135deg,#e7e8fc,#f8e9f1);border:1px solid #e7e4f2;border-radius:18px;padding:15px;color:#282a39}
+.weather-city-top{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.weather-city-name{font-size:11px;font-weight:850}.weather-city-meta{font-size:7px;color:#878a99;margin-top:3px}
+.weather-city-main{display:flex;align-items:center;gap:12px;margin:14px 0 10px}.weather-city-icon{font-size:36px}.weather-city-temp{font-size:31px;font-weight:650;letter-spacing:-.05em}.weather-city-cond{font-size:10px;color:#777b8c;margin-top:3px}
+.weather-details{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}.weather-detail{padding:8px;border-radius:10px;background:#ffffffa6}.weather-detail small{display:block;font-size:7px;color:#8a8d9c}.weather-detail strong{font-size:9px;display:block;margin-top:5px}
+.weather-credit{font-size:7px;color:#989baa;line-height:1.6;padding:3px 2px 8px}
+.reminder-app-list{padding:10px 12px 18px;background:#f6f7fb}.reminder-app-intro{font-size:8px;color:#8a8e9d;padding:6px 2px 12px;line-height:1.6}.reminder-app-row{display:flex;align-items:flex-start;gap:10px;border:1px solid #e7e8f0;border-radius:13px;padding:11px 10px;background:#fff;margin-bottom:8px}.reminder-app-row input{accent-color:#686fe2;width:15px;height:15px;margin:2px 0 0;flex:0 0 15px}.reminder-app-row span{flex:1;min-width:0}.reminder-app-row strong{display:block;font-size:9px;line-height:1.5;color:#2e3040}.reminder-app-row small{display:block;font-size:7px;color:#888c9a;line-height:1.5;margin-top:4px}.reminder-app-row em{font-style:normal;font-size:7px;color:#7277cf;white-space:nowrap}.reminder-app-row.is-done strong{text-decoration:line-through;color:#979aa7}.reminder-app-row.is-done{background:#f4f4f9;opacity:.8}
+.incoming-call-transcript .caption-line{margin:0 0 7px}.incoming-call-transcript .caption-speaker{display:block;font-weight:800;font-size:8px;letter-spacing:.03em;color:#f0d8fd;margin-bottom:3px}.incoming-call-transcript .caption-text{display:block;font-size:10px;line-height:1.65;color:#fff}
+.incoming-call-auto-note{font-size:8px;color:#e4deef;line-height:1.5;margin-top:9px}
+@media(max-width:600px){.weather-cards{padding:13px}.weather-city-card{padding:17px}.weather-city-temp{font-size:35px}.reminder-app-row{padding:13px 11px}}
+/* The supplied widget reference defines one home screen, not a carousel of pages. */
+.home-page-dots{display:none!important}
+.browser-app{background:#f6f7fb;color:#232533;padding-bottom:14px}
+.browser-top-label{font-size:7px;color:#999dac;font-weight:500}
+.browser-page-head{display:flex;align-items:center;gap:10px;padding:12px 13px 15px}
+.browser-brand-mark{height:37px;width:37px;display:grid;place-items:center;border-radius:14px;background:linear-gradient(145deg,#a9b6ff,#6f70d7);color:#fff;font-size:24px;box-shadow:0 5px 14px #7a7bd728}
+.browser-page-head strong{display:block;font-size:12px;color:#2b2d3a}.browser-page-head small{display:block;font-size:8px;color:#9699a7;margin-top:4px}
+.browser-search-form{display:flex;align-items:center;gap:7px;margin:0 12px 13px;padding:5px 7px 5px 10px;border:1px solid #e2e4ee;border-radius:14px;background:#fff;box-shadow:0 3px 9px #282b4108}
+.browser-search-symbol{font-size:20px;color:#7a7ed6;line-height:1}
+.browser-search-form input{flex:1;min-width:0;border:0!important;outline:none!important;box-shadow:none!important;background:transparent!important;font-size:9px!important;padding:8px 0!important;color:#303241}
+.browser-search-form button{border:0;border-radius:9px;background:#696fe0;color:#fff;padding:8px 10px;font-size:8px;font-weight:800}
+.browser-section-title{font-size:9px;font-weight:850;color:#454858;padding:5px 14px 7px}
+.browser-history-list{margin:0 11px 10px;background:#fff;border:1px solid #e8e9f1;border-radius:14px;overflow:hidden}
+.browser-history-item{display:flex;align-items:center;gap:9px;width:100%;padding:11px 10px;border:0;border-bottom:1px solid #f0f1f5;background:#fff;text-align:left;color:#333645;font-size:9px;min-height:37px}
+.browser-history-item:last-child{border-bottom:0}.browser-history-item:active{background:#f4f3ff}
+.browser-history-clock{font-size:14px;color:#a1a4b3;width:18px;text-align:center;flex:0 0 18px}.browser-history-item span:nth-child(2),.browser-history-query{flex:1;min-width:0}.browser-history-time{font-size:7px;color:#a0a3b0;white-space:nowrap}.browser-history-item b{font-weight:500;color:#a2a4b1;font-size:12px}
+.browser-note{margin:10px 13px 13px;font-size:7px;color:#9a9dab;line-height:1.6}
+.browser-shortcuts{padding:0 13px 15px}.browser-shortcuts>span{display:block;font-size:9px;font-weight:850;color:#535667;margin-bottom:8px}.browser-shortcuts>div{display:flex;gap:7px}.browser-shortcuts button{border:1px solid #e3e4ee;border-radius:20px;background:#fff;color:#7478cb;padding:7px 10px;font-size:7px}
+.browser-result-top{padding-top:9px;background:#f6f7fb}.browser-results-caption{font-size:7px;color:#9498a7;padding:0 14px 10px}
+.browser-results{padding:0 11px 14px;display:flex;flex-direction:column;gap:9px}
+.browser-result-card{border:1px solid #e8e9f0;border-radius:13px;background:#fff;padding:12px 11px;text-align:left;color:#303241;width:100%;box-shadow:0 3px 10px #20254106}
+.browser-result-card small{display:block;font-size:7px;color:#8b8fa2;margin-bottom:5px}.browser-result-card strong{display:block;color:#4c57b7;font-size:10px;line-height:1.45;font-weight:800}.browser-result-card p{font-size:8px;color:#737888;line-height:1.65;margin:6px 0 7px}.browser-result-card em{font-size:7px;font-style:normal;color:#9b9eac}
+.browser-fiction-note{padding:8px 3px;color:#9b9ead;font-size:7px;line-height:1.6}
+.browser-article{padding:18px 15px 22px;background:#fff;min-height:100%}.browser-article-source{font-size:8px;color:#8f92a2;line-height:1.5}.browser-article h2{font-size:17px;line-height:1.45;letter-spacing:-.035em;color:#333545;margin:10px 0}.browser-article-summary{font-size:10px;line-height:1.7;color:#717687;margin:0}.browser-article-rule{height:1px;background:#e9eaf1;margin:17px 0}.browser-article-body{font-size:10px;line-height:1.9;color:#484b5a;white-space:pre-wrap;overflow-wrap:anywhere}.browser-return-results{margin-top:20px;width:100%;padding:10px;border:1px solid #dedff0;border-radius:10px;background:#f8f8ff;color:#666cce;font-size:9px;font-weight:800}
+@media(max-width:600px){.browser-page-head{padding-top:16px}.browser-article{padding:18px 16px 26px}.browser-article h2{font-size:19px}.browser-result-card{padding:14px 12px}}
 </style>
 </head>
 <body>
 <header class="topbar"><div class="brand"><span class="logo">✦</span>Meteora</div><div class="top-note">SEONGUN’S GALAXY · CHARACTER PHONE SIMULATOR</div></header>
 <main>
-<section class="intro"><div class="eyebrow">A LITTLE UNIVERSE FOR A FICTIONAL CHARACTER</div><h1>유성운의 갤럭시를<br>직접 사용해 보세요.</h1><p>성운의 휴대폰을 열어 카카오톡·문자·달력·메일·전화 앱을 체험해 보세요.<br>대화와 일정, 통화 기록은 이 브라우저에만 저장되는 가상 체험 데이터예요.</p></section>
+<section class="intro"><div class="eyebrow">A LITTLE UNIVERSE FOR A FICTIONAL CHARACTER</div><h1>유성운의 갤럭시를<br>직접 사용해 보세요.</h1><p>성운의 휴대폰을 열어 카카오톡·문자·달력·메일·전화 앱을 체험해 보세요.<br>기본 설정과 대화 기록은 운영자가 관리하고, 방문자의 답장·개인 일정은 각 브라우저에 따로 저장돼요.</p></section>
 <div class="workspace">
 <section class="panel">
  <div class="panel-head"><h2>휴대폰 꾸미기</h2><span class="step">01 / CUSTOMIZE</span></div>
@@ -161,7 +320,7 @@ main{max-width:none;width:100%;height:100dvh;margin:0;padding:0}
   <div class="camera-hole" id="cameraHole" aria-hidden="true"></div><div class="phone-status" id="phoneStatus"><span id="statusTime">22:48</span><span class="status-right">▂▄▆ ◔ ▰ 78%</span></div>
   <div class="screen-view home-view" id="homeView">
    <div class="home-ambient-header">
-    <div class="weather-mini"><span class="moon-mark">☾</span><span class="weather-copy"><strong>13°</strong><small>⌖ 오남읍</small></span></div>
+    <div class="weather-mini" role="button" tabindex="0" aria-label="날씨 앱 열기" title="날씨 자세히 보기"><span class="moon-mark" id="weatherGlyph">☾</span><span class="weather-copy"><strong id="weatherTemperature">13°</strong><small id="weatherRegion">⌖ 서울</small></span></div>
     <div class="home-date-meta"><span id="homeDate">10월 16일 금요일</span><strong id="homeClock">22:48</strong></div>
    </div>
    <div class="home-dashboard">
@@ -172,12 +331,13 @@ main{max-width:none;width:100%;height:100dvh;margin:0;padding:0}
     </section>
     <section class="home-right-stack">
      <div class="reminder-home-widget">
-      <div class="reminder-home-title"><strong>전체</strong><button type="button" id="addQuickEvent" aria-label="일정 추가">＋</button></div>
+      <div class="reminder-home-title"><button type="button" class="reminder-open-title" id="openReminders" aria-label="리마인더 앱 열기">리마인더 ↗</button><button type="button" id="addQuickEvent" aria-label="개인 일정 추가">＋</button></div>
       <div class="home-reminder-list" id="homeReminderList"><span class="no-reminders">리마인더가 없습니다</span></div>
      </div>
      <div class="quick-home-apps">
       <button type="button" class="quick-home-launch" data-app="kakao" aria-label="카카오톡 열기"><span class="quick-home-icon quick-kakao"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 4C8.8 4 3 8.5 3 14s2.2 6.4 5.5 8.2l-1.4 5.2 6-3.4c.9.2 1.9.3 2.9.3 7.2 0 13-4.6 13-10.3S23.2 4 16 4Z" fill="#302b07"/><text x="16" y="17.3" font-size="6.7" font-weight="900" fill="#fee500" text-anchor="middle">TALK</text></svg><b class="badge-num" id="kakaoBadge">2</b></span><span>카카오톡</span></button>
       <button type="button" class="quick-home-launch" data-app="mail" aria-label="전체 계정 열기"><span class="quick-home-icon quick-mail"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M4 8.5A3.5 3.5 0 0 1 7.5 5h17A3.5 3.5 0 0 1 28 8.5v15a3.5 3.5 0 0 1-3.5 3.5h-17A3.5 3.5 0 0 1 4 23.5Z" fill="#4775b5"/><path d="m5.5 8 10.5 8.5L26.5 8" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>전체 계정</span></button>
+      <button type="button" class="quick-home-launch" data-app="settings" aria-label="휴대폰 정보 열기"><span class="quick-home-icon quick-settings-icon"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M13.2 3.8h5.6l.8 3.1a9.7 9.7 0 0 1 2.1.9l2.9-1.4 4 4-1.4 2.9c.4.7.7 1.4.9 2.1l3.1.8v5.6l-3.1.8a9.7 9.7 0 0 1-.9 2.1l1.4 2.9-4 4-2.9-1.4c-.7.4-1.4.7-2.1.9l-.8 3.1h-5.6l-.8-3.1a9.7 9.7 0 0 1-2.1-.9l-2.9 1.4-4-4 1.4-2.9a9.7 9.7 0 0 1-.9-2.1l-3.1-.8v-5.6l3.1-.8a9.7 9.7 0 0 1 .9-2.1L3.4 10.3l4-4 2.9 1.4c.7-.4 1.4-.7 2.1-.9z" transform="translate(1 0) scale(.9)" fill="#fff" opacity=".96"/><circle cx="16" cy="17" r="5.1" fill="#8b7be0" stroke="#fff" stroke-width="2"/></svg></span><span>기기 정보</span></button>
      </div>
     </section>
    </div>
@@ -201,18 +361,25 @@ main{max-width:none;width:100%;height:100dvh;margin:0;padding:0}
 </section>
 </div>
 </main>
-<footer class="footer"><span><strong>Meteora</strong> · 유성운의 Galaxy · Fictional character phone</span><span>실제 카카오톡·문자·메일과 연결되지 않는 가상 시뮬레이션입니다. 사진은 이 브라우저에서만 처리돼요.</span></footer>
+<footer class="footer"><span><strong>Meteora</strong> · 유성운의 Galaxy · Fictional character phone</span><span>기본 설정은 운영자가 관리합니다. 방문자의 답장·개인 일정·통화 기록은 각 브라우저에 별도로 저장됩니다.</span></footer>
 <div class="toast" id="toast" role="status"></div>
+<script src="./meteora-config.js?v=20261017-browser-home"></script>
 <script>
 'use strict';
 const $=id=>document.getElementById(id);
 const pad=n=>String(n).padStart(2,'0');
 const now=new Date();
+const siteConfig=window.METEORA_CONFIG||{};
 const defaultDateLabel=`${now.getMonth()+1}월 ${now.getDate()}일 ${['일요일','월요일','화요일','수요일','목요일','금요일','토요일'][now.getDay()]}`;
 $('dateText').value=defaultDateLabel;
-$('homeDate').textContent=defaultDateLabel+' · 서울';$('lockDate').textContent=defaultDateLabel;
-let photoData=null, activeMode='home', activeApp='', currentThread=null;
-let notificationData=[{app:'카카오톡',message:'내일 회의 자료 오늘 중으로 부탁해요.'},{app:'메시지',message:'엄마: 늦더라도 저녁은 꼭 챙겨 먹어.'},{app:'회사 메일',message:'[기획팀] 수정안 확인 요청'}];
+$('openMailWidget').textContent=siteConfig.emailAddress||'seongun.office@meteora.kr';
+$('homeDate').textContent=defaultDateLabel+' · 서울';
+$('weatherTemperature').textContent='—°';
+$('weatherRegion').textContent='⌖ 서울';
+$('lockDate').textContent=defaultDateLabel;
+let wallpaperConfig={home:siteConfig.wallpaper?.home||null,lock:siteConfig.wallpaper?.lock||null,homeName:'공유 기본 배경',lockName:'공유 기본 배경'};
+let photoData=null, activeMode='home', activeApp='', currentThread=null, activeEmail=null;
+let notificationData=JSON.parse(JSON.stringify(siteConfig.notifications||[]));
 const defaultWallpaper='night-office';
 const savedNoteKey='meteora-seongun-note-v1';
 const todayKey=dateKey(new Date());
@@ -222,29 +389,189 @@ function timeText(){return $('screenTime').value||'22:48';}
 function safeLoad(key,fallback){try{const raw=localStorage.getItem(key);return raw?JSON.parse(raw):fallback;}catch(e){return fallback;}}
 function safeSave(key,val){try{localStorage.setItem(key,JSON.stringify(val));}catch(e){}}
 function escapeHtml(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
-const baseKakao=[
- {id:'manager',name:'김 팀장',avatar:'김',color:'#d5dcec',preview:'내일 회의 자료 공유 부탁해요',time:'오후 9:42',unread:2,messages:[{from:'them',text:'성운 씨, 내일 아침 회의 자료 확인 부탁해요.',time:'오후 9:42'},{from:'me',text:'네, 수정본 정리해서 메일로 보내겠습니다.',time:'오후 9:44'}]},
- {id:'team',name:'기획팀 단톡방 (7)',avatar:'7',color:'#d7dafa',preview:'최종본 확인했습니다!',time:'오후 9:18',unread:5,messages:[{from:'them',text:'최종본 확인했습니다! 다들 늦게까지 고생 많아요.',time:'오후 9:18'}]},
- {id:'jihoon',name:'지훈',avatar:'지',color:'#d7e5e2',preview:'퇴근했어? 난 아직 사무실...',time:'오후 8:56',unread:0,messages:[{from:'them',text:'퇴근했어? 난 아직 사무실이야 ㅋㅋ',time:'오후 8:56'}]},
- {id:'mom',name:'엄마',avatar:'엄',color:'#f2dfd7',preview:'밥은 챙겨 먹고 다니지?',time:'오후 6:04',unread:1,messages:[{from:'them',text:'밥은 챙겨 먹고 다니지? 너무 늦게까지 일하지 마.',time:'오후 6:04'}]}
-];
-const baseSms=[
- {id:'hr',name:'인사팀',avatar:'인',color:'#dfe5f1',preview:'[공지] 다음 주 월요일부터...',time:'오후 5:20',unread:0,messages:[{from:'them',text:'[공지] 다음 주 월요일부터 조직 개편 관련 안내가 진행됩니다.',time:'오후 5:20'}]},
- {id:'mom-sms',name:'엄마',avatar:'엄',color:'#f3dfd8',preview:'도착하면 연락해',time:'오후 7:12',unread:1,messages:[{from:'them',text:'늦게 들어가도 도착하면 연락해. 걱정되니까.',time:'오후 7:12'}]},
- {id:'parcel',name:'택배',avatar:'택',color:'#dce9f6',preview:'배송 예정 안내입니다.',time:'오후 3:17',unread:0,messages:[{from:'them',text:'고객님의 택배가 오늘 배송될 예정입니다.',time:'오후 3:17'}]}
-];
-let kakaoChats=safeLoad('meteora-kakao-chats-v1',baseKakao);
-let smsChats=safeLoad('meteora-sms-chats-v1',baseSms);
-let calendarEvents=safeLoad('meteora-calendar-v1',null);
-if(!calendarEvents){const d=new Date();const tomorrow=new Date(d);tomorrow.setDate(d.getDate()+1);calendarEvents={};calendarEvents[dateKey(d)]=[{id:'seed1',time:'20:30',title:'기획안 최종 수정'},{id:'seed2',time:'22:00',title:'팀장에게 수정본 메일 보내기'}];calendarEvents[dateKey(tomorrow)]=[{id:'seed3',time:'09:00',title:'팀 회의 자료 정리'}];safeSave('meteora-calendar-v1',calendarEvents);}
+const baseKakao=JSON.parse(JSON.stringify(siteConfig.kakaoChats||[]));
+const baseSms=JSON.parse(JSON.stringify(siteConfig.smsChats||[]));
+const chatStoreKeys={kakao:'meteora-personal-kakao-v2',messages:'meteora-personal-sms-v2'};
+const initialChatStore={replies:{},extraChats:[],read:{}};
+let visitorKakaoData=safeLoad(chatStoreKeys.kakao,JSON.parse(JSON.stringify(initialChatStore)));
+let visitorSmsData=safeLoad(chatStoreKeys.messages,JSON.parse(JSON.stringify(initialChatStore)));
+function buildChats(base,data){
+ const canonical=JSON.parse(JSON.stringify(base)).map(chat=>{
+  const replies=(data.replies&&data.replies[chat.id])||[];
+  const messages=[...(chat.messages||[]),...replies];
+  const last=messages[messages.length-1];
+  return {...chat,messages,preview:replies.length?(last?.text||chat.preview):chat.preview,time:replies.length?'지금':chat.time,unread:Object.prototype.hasOwnProperty.call(data.read||{},chat.id)?((data.read||{})[chat.id]?0:Number((data.unreadCounts||{})[chat.id]||0)):Number(chat.unread||0)};
+ });
+ return [...canonical,JSON.parse(JSON.stringify(data.extraChats||[]))].flat();
+}
+let kakaoChats=buildChats(baseKakao,visitorKakaoData);
+let smsChats=buildChats(baseSms,visitorSmsData);
+function baseCalendarFromConfig(){
+ const result={};
+ (siteConfig.calendarEvents||[]).forEach((ev,i)=>{const date=new Date();date.setHours(12,0,0,0);date.setDate(date.getDate()+Number(ev.dayOffset||0));const key=dateKey(date);(result[key]||(result[key]=[])).push({...ev,id:`base-event-${i}`,source:'default'});});
+ return result;
+}
+const baseCalendarEvents=baseCalendarFromConfig();
+let visitorCalendarEvents=safeLoad('meteora-personal-calendar-v2',{});
+let calendarEvents={};
+function rebuildCalendarEvents(){
+ const merged={};
+ Object.keys(baseCalendarEvents).forEach(k=>merged[k]=baseCalendarEvents[k].map(ev=>({...ev,source:'default'})));
+ Object.keys(visitorCalendarEvents||{}).forEach(k=>{const extras=(visitorCalendarEvents[k]||[]).map(ev=>({...ev,source:'visitor'}));merged[k]=[...(merged[k]||[]),...extras];});
+ calendarEvents=merged;
+}
+rebuildCalendarEvents();
 let selectedDate=new Date();selectedDate.setHours(12,0,0,0);let shownMonth=new Date(selectedDate.getFullYear(),selectedDate.getMonth(),1);
-const noteDefault='내일 회의 전에 확인할 것\n□ 기획안 최종 수정\n□ 팀장에게 메일 보내기\n□ 회의실 예약 확인\n\n오늘도 수고했어, 성운아.';
+const noteDefault='게이트 보고서 확인\n□ 잔류 마력 수치 기입\n□ 출동 인원 귀환 확인\n□ 비사벌 길드장에게 수정본 전달\n\n오늘도 수고했어, 성운아.';
 function getNote(){try{return localStorage.getItem(savedNoteKey)||noteDefault;}catch(e){return noteDefault;}}
 function toast(msg){const el=$('toast');el.textContent=msg;el.style.display='block';clearTimeout(toast.t);toast.t=setTimeout(()=>el.style.display='none',2400);}
+
+// Scripted incoming messages/calls are fictional, in-page events. They only run while the visitor is exploring this page.
+const incomingStory=siteConfig.incomingSimulation||{};
+let incomingScenarioStarted=false,incomingSequenceIndex=0,incomingSequenceTimer=null,incomingBannerTimer=null,activeIncomingCall=null;
+function timeStampNow(){return new Date().toLocaleTimeString('ko-KR',{hour:'2-digit',minute:'2-digit',hour12:true});}
+function randomBetween(min,max){min=Number(min)||1;max=Number(max)||min;if(max<min)[min,max]=[max,min];return Math.floor(Math.random()*(max-min+1))+min;}
+function startIncomingScenario(){
+ if(incomingScenarioStarted||incomingStory.enabled===false||!Array.isArray(incomingStory.events)||!incomingStory.events.length)return;
+ incomingScenarioStarted=true;
+ const first=Math.max(5,Number(incomingStory.firstDelaySeconds)||18);
+ scheduleIncomingEvent(0,first*1000);
+}
+function scheduleIncomingEvent(index,delay){
+ clearTimeout(incomingSequenceTimer);
+ const maxEvents=Math.max(1,Number(incomingStory.maxEventsPerSession)||4);
+ if(index>=maxEvents)return;
+ incomingSequenceTimer=setTimeout(()=>{
+  if(document.visibilityState!=='visible'){scheduleIncomingEvent(index,10000);return;}
+  if(activeIncomingCall){scheduleIncomingEvent(index,8000);return;}
+  const event=incomingStory.events[index%incomingStory.events.length];
+  if(!event)return;
+  incomingSequenceIndex=index+1;
+  if(event.type==='call')showIncomingCall(event);else deliverIncomingMessage(event);
+  const min=Math.max(15,Number(incomingStory.minIntervalSeconds)||40),max=Math.max(min,Number(incomingStory.maxIntervalSeconds)||65);
+  scheduleIncomingEvent(index+1,randomBetween(min,max)*1000);
+ },delay);
+}
+function updateChatBadges(){
+ const kc=$('kakaoBadge'),sc=$('smsBadge');
+ const kn=kakaoChats.reduce((n,c)=>n+Number(c.unread||0),0),sn=smsChats.reduce((n,c)=>n+Number(c.unread||0),0);
+ if(kc){kc.textContent=String(Math.min(99,kn));kc.style.display=kn?'grid':'none';}
+ if(sc){sc.textContent=String(Math.min(99,sn));sc.style.display=sn?'grid':'none';}
+}
+function deliverIncomingMessage(event){
+ const isKakao=event.app==='kakao';
+ const data=isKakao?visitorKakaoData:visitorSmsData,base=isKakao?baseKakao:baseSms,key=isKakao?chatStoreKeys.kakao:chatStoreKeys.messages;
+ let chatId=String(event.chatId||'');
+ let chat=base.find(c=>c.id===chatId)||(data.extraChats||[]).find(c=>c.id===chatId);
+ if(!chat){chatId=`incoming-${isKakao?'k':'s'}-${Date.now()}`;data.extraChats=data.extraChats||[];data.extraChats.unshift({id:chatId,name:event.sender||'알 수 없는 발신자',avatar:(event.sender||'?').slice(0,1),color:'#d8dff4',preview:event.text||'새 메시지',time:'지금',unread:0,messages:[]});chat=data.extraChats[0];}
+ const message={from:'them',text:String(event.text||'새 메시지가 도착했습니다.'),time:timeStampNow(),incomingStory:true};
+ if(base.some(c=>c.id===chatId)){data.replies=data.replies||{};data.replies[chatId]=data.replies[chatId]||[];data.replies[chatId].push(message);}
+ else{chat.messages=chat.messages||[];chat.messages.push(message);chat.preview=message.text;chat.time='지금';}
+ data.unreadCounts=data.unreadCounts||{};data.unreadCounts[chatId]=Number(data.unreadCounts[chatId]||0)+1;data.read=data.read||{};data.read[chatId]=false;
+ safeSave(key,data);
+ if(isKakao)kakaoChats=buildChats(baseKakao,visitorKakaoData);else smsChats=buildChats(baseSms,visitorSmsData);
+ const appName=isKakao?'카카오톡':'메시지';
+ if(activeMode==='app'&&activeApp===(isKakao?'kakao':'messages')&&currentThread?.id===chatId){
+  data.read[chatId]=true;safeSave(key,data);
+  if(isKakao)renderKakao();else renderSms();scrollThread();
+  toast(`${event.sender||chat.name}: 새 메시지가 도착했어요.`);
+ }else showIncomingBanner({...event,chatId,app:isKakao?'kakao':'messages',sender:event.sender||chat.name});
+ updateChatBadges();renderHomeDashboard();
+}
+function showIncomingBanner(event){
+ const screen=$('phoneScreen');if(!screen)return;
+ const old=$('incomingBannerWrap');if(old)old.remove();clearTimeout(incomingBannerTimer);
+ const wrap=document.createElement('div');wrap.className='incoming-banner-wrap';wrap.id='incomingBannerWrap';
+ const icon=event.app==='kakao'?'T':'✉';
+ wrap.innerHTML=`<button type="button" class="incoming-banner" aria-label="새 메시지 열기"><span class="incoming-banner-icon">${icon}</span><span class="incoming-banner-copy"><strong><span>${escapeHtml(event.sender||'새 메시지')}</span><small>지금</small></strong><p>${escapeHtml(event.text||'새 메시지가 도착했어요.')}</p></span></button><button type="button" class="incoming-banner-close" aria-label="알림 닫기">×</button>`;
+ screen.appendChild(wrap);
+ wrap.querySelector('.incoming-banner').addEventListener('click',()=>{wrap.remove();clearTimeout(incomingBannerTimer);openIncomingChat(event.app,event.chatId);});
+ wrap.querySelector('.incoming-banner-close').addEventListener('click',()=>{wrap.remove();clearTimeout(incomingBannerTimer);});
+ incomingBannerTimer=setTimeout(()=>{if(wrap.isConnected)wrap.remove();},10000);
+}
+function openIncomingChat(app,chatId){
+ const isKakao=app==='kakao',data=isKakao?visitorKakaoData:visitorSmsData,key=isKakao?chatStoreKeys.kakao:chatStoreKeys.messages;
+ openApp(isKakao?'kakao':'messages');currentThread={app:isKakao?'kakao':'messages',id:chatId};data.read=data.read||{};data.read[chatId]=true;safeSave(key,data);
+ if(isKakao){kakaoChats=buildChats(baseKakao,visitorKakaoData);renderKakao();}else{smsChats=buildChats(baseSms,visitorSmsData);renderSms();}
+ updateChatBadges();scrollThread();
+}
+function addIncomingCallLog(event,status){
+ const calls=safeLoad('meteora-visitor-call-log-v1',[]);
+ calls.unshift({name:event.name||event.sender||'알 수 없는 발신자',number:event.number||'가상 발신번호',kind:'in',status,when:new Date().toLocaleString('ko-KR',{month:'numeric',day:'numeric',hour:'2-digit',minute:'2-digit'})});
+ safeSave('meteora-visitor-call-log-v1',calls.slice(0,30));
+}
+function closeIncomingCall(){if(!activeIncomingCall)return;clearTimeout(activeIncomingCall.timeout);clearInterval(activeIncomingCall.clock);(activeIncomingCall.scriptTimers||[]).forEach(clearTimeout);if(activeIncomingCall.overlay?.isConnected)activeIncomingCall.overlay.remove();activeIncomingCall=null;}
+function finishIncomingCall(status){if(!activeIncomingCall)return;const event=activeIncomingCall.event;addIncomingCallLog(event,status);closeIncomingCall();toast(status==='부재중 전화 · 가상 체험'?'부재중 전화가 기록됐어요.':'가상 통화를 종료했어요.');}
+function showIncomingCall(event){
+ const screen=$('phoneScreen');if(!screen)return;
+ const old=$('incomingBannerWrap');if(old)old.remove();clearTimeout(incomingBannerTimer);
+ const overlay=document.createElement('div');overlay.className='incoming-call-overlay';overlay.id='incomingCallOverlay';
+ overlay.innerHTML=`<div class="incoming-call-inner"><div class="incoming-call-kicker">수신 전화 · 가상 통화</div><div class="incoming-call-avatar">${escapeHtml((event.name||'수').slice(0,1))}</div><h2 class="incoming-call-name">${escapeHtml(event.name||'수집상')}</h2><p class="incoming-call-subtitle">${escapeHtml(event.title||'휴대전화')}</p><p class="incoming-call-state" id="incomingCallState">전화가 오고 있어요…</p><div class="incoming-call-actions"><button type="button" class="call-action call-decline" data-call-decline><span class="call-action-circle">✕</span><span>거절</span></button><button type="button" class="call-action call-answer" data-call-answer><span class="call-action-circle">☎</span><span>받기</span></button></div><div class="incoming-call-foot">Meteora 가상 통화 · 실제 전화는 연결되지 않습니다.</div></div>`;
+ $('phoneScreen').appendChild(overlay);
+ activeIncomingCall={event,overlay,accepted:false,startedAt:0,timeout:setTimeout(()=>{if(activeIncomingCall&&!activeIncomingCall.accepted)finishIncomingCall('부재중 전화 · 가상 체험');},22000),clock:null};
+ overlay.querySelector('[data-call-decline]').addEventListener('click',()=>finishIncomingCall('부재중 전화 · 가상 체험'));
+ overlay.querySelector('[data-call-answer]').addEventListener('click',()=>answerIncomingCall());
+}
+function answerIncomingCall(){
+ if(!activeIncomingCall)return;const call=activeIncomingCall;clearTimeout(call.timeout);call.accepted=true;call.startedAt=Date.now();call.scriptTimers=[];
+ const ev=call.event,overlay=call.overlay;
+ overlay.innerHTML=`<div class="incoming-call-inner"><div class="incoming-call-kicker">통화 연결됨 · 가상 체험</div><div class="incoming-call-avatar" style="animation:none">${escapeHtml((ev.name||'수').slice(0,1))}</div><h2 class="incoming-call-name">${escapeHtml(ev.name||'수집상')}</h2><p class="incoming-call-subtitle">${escapeHtml(ev.title||'휴대전화')}</p><div class="incoming-call-calltime" id="incomingCallDuration">00:00</div><div class="incoming-call-transcript" id="incomingCallTranscript"></div><div class="call-response-list" id="incomingCallResponses"></div><button type="button" class="incoming-call-end" data-call-end>통화 종료</button><div class="incoming-call-foot">유성운의 휴대전화에 도착한 가상 통화입니다.</div></div>`;
+ call.clock=setInterval(()=>{const el=$('incomingCallDuration');if(el){const secs=Math.floor((Date.now()-call.startedAt)/1000);el.textContent=`${pad(Math.floor(secs/60))}:${pad(secs%60)}`;}},1000);
+ overlay.querySelector('[data-call-end]').addEventListener('click',()=>finishIncomingCall('수신 통화 · 가상 체험'));
+ if(Array.isArray(ev.transcriptLines)&&ev.transcriptLines.length){
+  const lines=ev.transcriptLines,transcript=$('incomingCallTranscript'),responses=$('incomingCallResponses');responses.innerHTML='<div class="incoming-call-auto-note">대화가 자막으로 재생됩니다. 내용이 끝나면 통화가 자동으로 종료돼요.</div>';
+  let lineIndex=0;const showLine=()=>{if(activeIncomingCall!==call||!call.overlay.isConnected)return;const line=lines[lineIndex];transcript.innerHTML=`<div class="caption-line"><span class="caption-speaker">${escapeHtml(line.speaker||ev.name||'상대')}</span><span class="caption-text">${escapeHtml(line.text||'')}</span></div>`;lineIndex++;if(lineIndex<lines.length){call.scriptTimers.push(setTimeout(showLine,2100));}else{call.scriptTimers.push(setTimeout(()=>{if(activeIncomingCall===call)finishIncomingCall('수신 통화 · 자동 종료');},1700));}};
+  showLine();return;
+ }
+ const firstLine=ev.dialogue||'성운아, 아직 사무실이야? 귀환 확인이 안 올라왔어.';
+ $('incomingCallTranscript').innerHTML=`<strong>${escapeHtml(ev.name||'상대')}</strong><br>${escapeHtml(firstLine)}`;
+ responses.innerHTML=(ev.responses||['네, 지금 정리 중입니다.','곧 복귀하겠습니다.','무슨 일 있으십니까?']).slice(0,3).map((r,i)=>`<button type="button" class="call-response-btn" data-call-response="${i}">${escapeHtml(r)}</button>`).join('');
+ overlay.querySelectorAll('[data-call-response]').forEach(btn=>btn.addEventListener('click',()=>{const i=Number(btn.dataset.callResponse),response=(ev.responses||[])[i]||btn.textContent,follow=(ev.followUps||[])[i]||ev.followUp||'알았다. 무리하지 말고 보고서보다 귀환을 먼저 해.';$('incomingCallTranscript').innerHTML=`<strong>유성운</strong><br>${escapeHtml(response)}<br><br><strong>${escapeHtml(ev.name||'상대')}</strong><br>${escapeHtml(follow)}`;$('incomingCallResponses').innerHTML='<div class="settings-scope-note" style="background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.15);color:#f3f0fb;text-align:center">상대가 답을 들었어요.</div>'; }));
+}
+
 function renderBuildings(){const root=$('cityBuildings');if(!root)return;root.innerHTML='';const heights=[49,66,39,77,56,86,43,70,52,94,59,74,45,82,54,68,42,78,50];heights.forEach((h,i)=>{const b=document.createElement('div');b.className='building';b.style.height=h+'%';if(i===9)b.style.flex='1.4';root.appendChild(b);});}
-function setWallpaper(){const layer=$('wallpaperLayer');if(photoData){layer.style.backgroundImage=`url("${photoData}")`;layer.style.backgroundSize='cover';layer.style.backgroundPosition='center';layer.querySelector('.city-horizon').style.display='none';layer.querySelector('.city-buildings').style.display='none';layer.querySelector('.desk-scene').style.display='none';}else{layer.style.backgroundImage='';layer.style.backgroundSize='';layer.style.backgroundPosition='';layer.querySelector('.city-horizon').style.display='';layer.querySelector('.city-buildings').style.display='';layer.querySelector('.desk-scene').style.display='';}}
+function applyWallpapers(){
+ const home=$('homeView'),lock=$('lockView');
+ const homeImage=wallpaperConfig.home,lockImage=wallpaperConfig.lock;
+ if(home){home.style.backgroundImage=homeImage?`linear-gradient(180deg,rgba(48,42,66,.10),rgba(58,47,70,.10)),url("${homeImage}")`:'';home.style.backgroundSize=homeImage?'cover':'';home.style.backgroundPosition=homeImage?'center center':'';home.style.backgroundRepeat=homeImage?'no-repeat':'';}
+ if(lock){lock.style.backgroundImage=lockImage?`linear-gradient(180deg,rgba(18,17,32,.26),rgba(28,22,43,.16)),url("${lockImage}")`:'';lock.style.backgroundSize=lockImage?'cover':'';lock.style.backgroundPosition=lockImage?'center center':'';lock.style.backgroundRepeat=lockImage?'no-repeat':'';}
+ photoData=null;
+}
+function setWallpaper(){applyWallpapers();}
+function wallpaperPreviewCss(data){return data?`background-image:linear-gradient(180deg,rgba(255,255,255,.03),rgba(40,35,55,.08)),url("${data}")`:'';}
+function renderSettings(){
+ const root=$('appView');const c=siteConfig.character||{};
+ root.innerHTML=appHeader('휴대폰 정보')+`<div class="app-scroll settings-page"><section class="wallpaper-setting-card"><div class="wallpaper-setting-head"><strong>${escapeHtml(c.name||'유성운')}</strong><small>${escapeHtml(c.rank||'A급 헌터')}</small></div><div class="settings-scope-note"><strong>소속 · ${escapeHtml(c.organization||'수집상')}</strong><br>길드장: ${escapeHtml(c.guildMaster||'비사벌')}<br><br>${escapeHtml(c.description||'수집상 소속 헌터입니다.')}</div></section><div class="settings-scope-note"><strong>기본 설정은 고정되어 있어요.</strong><br>배경화면, 날씨 지역, 기본 캘린더 일정, 리마인더, 회사 메일, 카카오톡·문자 기본 내역은 사이트 운영자가 저장소의 <code>meteora-config.js</code>를 수정해야 바뀝니다. 방문자는 기본 내역을 삭제하거나 고칠 수 없어요.<br><br>방문자가 작성한 답장과 개인 일정은 해당 브라우저에만 저장되며 다른 방문자에게 보이지 않습니다.</div><div class="settings-scope-note">모든 메시지와 메일, 통화는 실제 통신 서비스에 연결되지 않는 헌터 세계관 가상 체험입니다.</div></div>`;
+ root.querySelector('[data-back]').addEventListener('click',()=>setMode('home'));
+}
+function weatherCodeInfo(code,isDay=1){
+ const c=Number(code);if(c===0)return {icon:isDay?'☀️':'🌙',label:'맑음'};if([1].includes(c))return {icon:isDay?'🌤️':'☁️',label:'대체로 맑음'};if([2].includes(c))return {icon:'⛅',label:'구름 조금'};if([3].includes(c))return {icon:'☁️',label:'흐림'};if([45,48].includes(c))return {icon:'🌫️',label:'안개'};if([51,53,55,56,57].includes(c))return {icon:'🌦️',label:'이슬비'};if([61,63,65,66,67,80,81,82].includes(c))return {icon:'🌧️',label:'비'};if([71,73,75,77,85,86].includes(c))return {icon:'❄️',label:'눈'};if([95,96,99].includes(c))return {icon:'⛈️',label:'뇌우'};return {icon:'🌥️',label:'구름'};
+}
+const weatherState={
+ seoul:{name:'서울특별시',temperature:null,feelsLike:null,humidity:null,wind:null,code:null,isDay:1,label:'실시간 날씨 연결 중',icon:'🌤️',updated:'연결 중'},
+ jeju:{name:'제주시',temperature:null,feelsLike:null,humidity:null,wind:null,code:null,isDay:1,label:'실시간 날씨 연결 중',icon:'🌤️',updated:'연결 중'}
+};
+function weatherEndpoint(lat,lon){return `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m,relative_humidity_2m,apparent_temperature,is_day,precipitation,weather_code,wind_speed_10m&timezone=Asia%2FSeoul`;}
+async function fetchCityWeather(key,lat,lon){
+ try{
+  const response=await fetch(weatherEndpoint(lat,lon),{cache:'no-store'});if(!response.ok)throw new Error('weather unavailable');const json=await response.json();const cur=json.current||{};const desc=weatherCodeInfo(cur.weather_code,cur.is_day);
+  weatherState[key]={...weatherState[key],temperature:Math.round(cur.temperature_2m),feelsLike:Math.round(cur.apparent_temperature),humidity:cur.relative_humidity_2m,wind:cur.wind_speed_10m,code:cur.weather_code,isDay:cur.is_day,label:desc.label,icon:desc.icon,updated:cur.time?String(cur.time).slice(11,16):'최신 자료'};
+ }catch(e){weatherState[key]={...weatherState[key],label:'날씨 정보 연결 지연',updated:'다시 시도해 주세요'};}
+ if(key==='seoul'){
+  const temp=$('weatherTemperature'),region=$('weatherRegion'),glyph=$('weatherGlyph');if(temp)temp.textContent=weatherState.seoul.temperature==null?'—°':`${weatherState.seoul.temperature}°`;if(region)region.textContent='⌖ 서울';if(glyph)glyph.textContent=weatherState.seoul.icon;
+ }
+ if(activeMode==='app'&&activeApp==='weather')renderWeather();
+}
+function loadWeather(){fetchCityWeather('seoul',37.5665,126.9780);fetchCityWeather('jeju',33.4996,126.5312);}
+function weatherCardHtml(w){return `<section class="weather-city-card"><div class="weather-city-top"><div><div class="weather-city-name">${escapeHtml(w.name)}</div><div class="weather-city-meta">대한민국 · 현재 날씨</div></div><small style="font-size:7px;color:#9699a8">${escapeHtml(w.updated||'')}</small></div><div class="weather-city-main"><span class="weather-city-icon">${w.icon}</span><div><div class="weather-city-temp">${w.temperature==null?'—':escapeHtml(w.temperature)}°</div><div class="weather-city-cond">${escapeHtml(w.label)}</div></div></div><div class="weather-details"><div class="weather-detail"><small>체감 온도</small><strong>${w.feelsLike==null?'—':escapeHtml(w.feelsLike)}°</strong></div><div class="weather-detail"><small>습도</small><strong>${w.humidity==null?'—':escapeHtml(w.humidity)}%</strong></div><div class="weather-detail"><small>풍속</small><strong>${w.wind==null?'—':escapeHtml(Math.round(w.wind))} km/h</strong></div></div></section>`;}
+function renderWeather(){const root=$('appView');root.innerHTML=appHeader('날씨',{right:'<button class="app-tool-btn" data-weather-refresh>↻</button>'})+`<div class="app-scroll weather-cards"><div class="settings-scope-note">홈 화면 날씨는 서울특별시로 고정되어 있어요. 여기에서는 서울과 제주시의 실시간 날씨를 함께 확인할 수 있어요.</div>${weatherCardHtml(weatherState.seoul)}${weatherCardHtml(weatherState.jeju)}<div class="weather-credit">날씨 데이터: Open-Meteo · API에 연결하지 못하면 잠시 후 새로고침해 주세요.</div></div>`;root.querySelector('[data-back]').addEventListener('click',()=>setMode('home'));root.querySelector('[data-weather-refresh]').addEventListener('click',()=>{toast('날씨를 새로고침하고 있어요.');loadWeather();});}
+const baseReminders=JSON.parse(JSON.stringify(siteConfig.reminders||[]));
+const reminderDoneKey='meteora-visitor-reminder-checks-v1';
+let reminderCompletion=safeLoad(reminderDoneKey,{});
+function setReminderDone(id,checked){reminderCompletion[id]=!!checked;safeSave(reminderDoneKey,reminderCompletion);renderHomeDashboard();if(activeMode==='app'&&activeApp==='reminders')renderReminders();}
+function renderReminders(){const root=$('appView');const doneCount=baseReminders.filter(r=>reminderCompletion[r.id]).length;root.innerHTML=appHeader('리마인더',{right:`<span style="font-size:8px;color:#858998">${doneCount}/${baseReminders.length} 완료</span>`})+`<div class="app-scroll reminder-app-list"><div class="reminder-app-intro">유성운의 기본 업무 체크리스트예요. 할 일의 내용은 고정되어 있고, 완료 체크만 이 브라우저에 따로 저장돼요.</div>${baseReminders.map(r=>`<label class="reminder-app-row ${reminderCompletion[r.id]?'is-done':''}"><input type="checkbox" data-reminder-check="${escapeHtml(r.id)}" ${reminderCompletion[r.id]?'checked':''}><span><strong>${escapeHtml(r.title)}</strong><small>${escapeHtml(r.detail||'')}</small></span><em>${escapeHtml(r.due||'')}</em></label>`).join('')}<div class="settings-scope-note">🔒 기본 할 일은 운영자만 수정할 수 있어요. 체크 상태는 방문자별로 분리됩니다.</div></div>`;root.querySelector('[data-back]').addEventListener('click',()=>setMode('home'));root.querySelectorAll('[data-reminder-check]').forEach(input=>input.addEventListener('change',()=>setReminderDone(input.dataset.reminderCheck,input.checked)));}
 function renderEditors(){const root=$('notificationEditors');root.innerHTML='';notificationData.forEach((n,i)=>{const card=document.createElement('div');card.className='notify-editor';card.innerHTML=`<div class="notify-top"><strong>알림 ${String(i+1).padStart(2,'0')}</strong><button class="remove" type="button" aria-label="알림 삭제" data-remove="${i}">×</button></div><div class="field"><label for="notifApp${i}">앱 이름</label><input id="notifApp${i}" type="text" maxlength="32" value="${escapeHtml(n.app)}"></div><div class="field"><label for="notifMsg${i}">메시지</label><textarea id="notifMsg${i}" maxlength="180">${escapeHtml(n.message)}</textarea></div>`;root.appendChild(card);card.querySelector(`#notifApp${i}`).addEventListener('input',e=>{notificationData[i].app=e.target.value;renderLockNotifications();});card.querySelector(`#notifMsg${i}`).addEventListener('input',e=>{notificationData[i].message=e.target.value;renderLockNotifications();});card.querySelector('[data-remove]').addEventListener('click',()=>{notificationData.splice(i,1);renderEditors();renderLockNotifications();});});renderLockNotifications();}
-function updateValues(){const t=timeText();$('statusTime').textContent=t;$('homeClock').textContent=t;$('lockTime').textContent=t;$('lockDate').textContent=$('dateText').value;$('homeDate').textContent=$('dateText').value;$('homeGreeting').textContent=$('greetingText').value||'오늘도 수고했어, 성운아 ✦';$('phoneStatus').style.display=$('showStatus').checked?'flex':'none';$('cameraHole').style.display='none';renderLockNotifications();renderHomeDashboard();}
+function updateValues(){const t=timeText();$('statusTime').textContent=t;$('homeClock').textContent=t;$('lockTime').textContent=t;$('lockDate').textContent=defaultDateLabel;$('homeDate').textContent=defaultDateLabel+' · 서울';$('homeGreeting').textContent=siteConfig.homeGreeting||'오늘도 수고했어, 성운아 ✦';$('phoneStatus').style.display=$('showStatus').checked?'flex':'none';$('cameraHole').style.display='none';renderLockNotifications();renderHomeDashboard();}
 function renderLockNotifications(){const root=$('lockNotifications');root.innerHTML='';if(!$('showNotifications').checked||notificationData.length===0){root.innerHTML='<div style="font-size:9px;color:#fff;text-align:center;padding:12px;text-shadow:0 1px 6px #0005">새로운 알림이 없어요.</div>';return;}notificationData.slice(0,5).forEach((n,i)=>{const b=document.createElement('button');b.className='lock-notification';b.type='button';b.innerHTML=`<div class="lock-notification-head"><span class="app-icon-small">${escapeHtml((n.app||'앱')[0])}</span><strong style="flex:1">${escapeHtml(n.app||'앱 알림')}</strong><span>${i===0?'지금':'1분 전'}</span></div><p>${escapeHtml(n.message||'메시지를 입력하세요')}</p>`;b.addEventListener('click',()=>{const app=(n.app||'').toLowerCase();if(app.includes('카카오')||app.includes('kakao'))openApp('kakao');else if(app.includes('메시지')||app.includes('문자')||app.includes('message'))openApp('messages');else if(app.includes('달력')||app.includes('일정')||app.includes('calendar'))openApp('calendar');else if(app.includes('메일'))openApp('mail');else openApp('messages');});root.appendChild(b);});}
 function renderHomeDashboard(){
  const monthEl=$('homeMonth'),grid=$('homeCalendarGrid'),reminderRoot=$('homeReminderList');
@@ -257,35 +584,125 @@ function renderHomeDashboard(){
  let cells=first+days;let total=Math.ceil(cells/7)*7;for(let i=days+1;i<=total-first;i++){const d=new Date(y,m,i);html+=`<button type="button" class="calendar-home-day outside ${d.getDay()===0?'sunday':d.getDay()===6?'saturday':''}" data-home-date="${dateKey(d)}">${d.getDate()}</button>`;}
  grid.innerHTML=html;
  grid.querySelectorAll('[data-home-date]').forEach(btn=>btn.addEventListener('click',()=>{const [yy,mm,dd]=btn.dataset.homeDate.split('-').map(Number);selectedDate=new Date(yy,mm-1,dd,12);shownMonth=new Date(yy,mm-1,1);renderHomeDashboard();openApp('calendar');}));
- const key=dateKey(selectedDate),events=(calendarEvents[key]||[]).slice(0,3);
- if(events.length){reminderRoot.innerHTML=events.map(ev=>`<button type="button" class="home-reminder-item" data-open-calendar><i></i><span><b>${escapeHtml(ev.time||'일정')}</b><br>${escapeHtml(ev.title)}</span></button>`).join('');}
+ const reminderItems=baseReminders.slice(0,3);
+ if(reminderItems.length){reminderRoot.innerHTML=reminderItems.map(r=>`<label class="home-reminder-item ${reminderCompletion[r.id]?'is-done':''}"><input type="checkbox" data-home-reminder="${escapeHtml(r.id)}" ${reminderCompletion[r.id]?'checked':''} aria-label="${escapeHtml(r.title)} 완료"><span>${escapeHtml(r.title)}</span></label>`).join('');}
  else{reminderRoot.innerHTML='<span class="no-reminders">리마인더가 없습니다</span>';}
- reminderRoot.querySelectorAll('[data-open-calendar]').forEach(btn=>btn.addEventListener('click',()=>openApp('calendar')));
+ reminderRoot.querySelectorAll('[data-home-reminder]').forEach(input=>input.addEventListener('change',()=>setReminderDone(input.dataset.homeReminder,input.checked)));
  const kakaoUnread=kakaoChats.reduce((n,c)=>n+(c.unread||0),0),smsUnread=smsChats.reduce((n,c)=>n+(c.unread||0),0);
  const kb=$('kakaoBadge'),sb=$('smsBadge');if(kb){kb.textContent=kakaoUnread>99?'99+':String(kakaoUnread);kb.style.display=kakaoUnread?'grid':'none';}if(sb){sb.textContent=smsUnread>99?'99+':String(smsUnread);sb.style.display=smsUnread?'grid':'none';}
 }
-function setMode(mode){activeMode=mode;activeApp='';currentThread=null;$('homeView').classList.toggle('hidden',mode!=='home');$('lockView').classList.toggle('hidden',mode!=='lock');$('appView').classList.add('hidden');$('homeModeBtn').classList.toggle('active',mode==='home');$('lockModeBtn').classList.toggle('active',mode==='lock');$('navHome').style.display='grid';if(mode==='home')renderHomeDashboard();}
+function setMode(mode){activeMode=mode;activeApp='';currentThread=null;$('homeView').classList.toggle('hidden',mode!=='home');$('lockView').classList.toggle('hidden',mode!=='lock');$('appView').classList.add('hidden');$('homeModeBtn').classList.toggle('active',mode==='home');$('lockModeBtn').classList.toggle('active',mode==='lock');$('navHome').style.display='grid';if(mode==='home'){renderHomeDashboard();startIncomingScenario();}}
 function showAppView(){ $('homeView').classList.add('hidden');$('lockView').classList.add('hidden');$('appView').classList.remove('hidden');$('navHome').style.display='block';$('homeModeBtn').classList.toggle('active',activeApp==='');$('lockModeBtn').classList.toggle('active',false); }
 function appHeader(title,opts={}){return `<div class="app-topbar ${opts.className||''}"><button type="button" class="back-btn" data-back aria-label="뒤로">‹</button><strong>${escapeHtml(title)}</strong>${opts.right||''}</div>`;}
 function avatarHtml(chat){return `<span class="avatar" style="background:${escapeHtml(chat.color||'#dbe1f2')}">${escapeHtml(chat.avatar||chat.name.slice(0,1))}</span>`;}
 function chatListHtml(chats,app){return `<div class="app-scroll"><div class="kakao-list">${chats.map(c=>`<button class="chat-row" type="button" data-chat="${escapeHtml(c.id)}" data-chat-app="${app}">${avatarHtml(c)}<span class="chat-row-main"><span class="chat-row-title">${escapeHtml(c.name)}</span><span class="chat-preview">${escapeHtml(c.preview||'대화를 시작해 보세요.')}</span></span><span class="chat-meta">${escapeHtml(c.time||'지금')}${c.unread?`<br><b class="unread-pill">${c.unread}</b>`:''}</span></button>`).join('')}</div></div>`;}
-function renderKakao(){const root=$('appView');if(!currentThread){root.innerHTML=appHeader('카카오톡',{className:'kakao-head',right:'<button class="app-tool-btn" data-new-chat title="새 대화">＋</button>'})+chatListHtml(kakaoChats,'kakao');root.querySelector('[data-back]').addEventListener('click',()=>setMode('home'));root.querySelector('[data-new-chat]').addEventListener('click',()=>{const name=prompt('새 대화 상대 이름을 입력해 주세요.');if(!name||!name.trim())return;const id='custom-'+Date.now();kakaoChats.unshift({id,name:name.trim(),avatar:name.trim().slice(0,1),color:'#e1e5f7',preview:'새로운 대화',time:'지금',unread:0,messages:[]});safeSave('meteora-kakao-chats-v1',kakaoChats);renderKakao();toast('새 대화방을 만들었어요.');});root.querySelectorAll('[data-chat]').forEach(btn=>btn.addEventListener('click',()=>{currentThread={app:'kakao',id:btn.dataset.chat};const chat=kakaoChats.find(c=>c.id===currentThread.id);if(chat)chat.unread=0;safeSave('meteora-kakao-chats-v1',kakaoChats);renderKakao();}));return;}
- const chat=kakaoChats.find(c=>c.id===currentThread.id);if(!chat){currentThread=null;renderKakao();return;}root.innerHTML=appHeader('',{className:'thread-header',right:'<button class="app-tool-btn" title="더 보기">⋯</button>'}).replace('<strong></strong>',`<span class="thread-contact">${avatarHtml(chat)}<span><strong>${escapeHtml(chat.name)}</strong><small>프로필 · 가상 대화</small></span></span>`)+`<div class="app-scroll" id="threadScroll"><div class="thread-messages"><div class="day-divider">오늘 ${escapeHtml(defaultDateLabel)}</div>${chat.messages.map(m=>`<div class="bubble-line ${m.from==='me'?'mine':''}">${m.from==='them'?`<span class="bubble-name">${escapeHtml(chat.name)}</span>`:''}<div class="bubble">${escapeHtml(m.text)}</div><span class="bubble-time">${escapeHtml(m.time||'지금')}</span></div>`).join('')}</div></div><form class="compose-bar" id="chatForm"><input id="chatInput" autocomplete="off" maxlength="300" placeholder="메시지 입력" aria-label="메시지 입력"><button class="send-btn" type="submit" aria-label="보내기">➤</button></form>`;root.querySelector('[data-back]').addEventListener('click',()=>{currentThread=null;renderKakao();});bindSend(chat,'kakao');scrollThread();}
-function renderSms(){const root=$('appView');if(!currentThread){root.innerHTML=appHeader('메시지',{className:'sms-head',right:'<button class="app-tool-btn" data-new-chat title="새 메시지">＋</button>'})+chatListHtml(smsChats,'messages');root.querySelector('[data-back]').addEventListener('click',()=>setMode('home'));root.querySelector('[data-new-chat]').addEventListener('click',()=>{const name=prompt('새 메시지 상대 이름을 입력해 주세요.');if(!name||!name.trim())return;const id='sms-'+Date.now();smsChats.unshift({id,name:name.trim(),avatar:name.trim().slice(0,1),color:'#dce9f8',preview:'새 메시지',time:'지금',unread:0,messages:[]});safeSave('meteora-sms-chats-v1',smsChats);renderSms();});root.querySelectorAll('[data-chat]').forEach(btn=>btn.addEventListener('click',()=>{currentThread={app:'messages',id:btn.dataset.chat};const chat=smsChats.find(c=>c.id===currentThread.id);if(chat)chat.unread=0;safeSave('meteora-sms-chats-v1',smsChats);renderSms();}));return;}
+function renderKakao(){const root=$('appView');if(!currentThread){root.innerHTML=appHeader('카카오톡',{className:'kakao-head',right:'<button class="app-tool-btn" data-new-chat title="새 대화">＋</button>'})+chatListHtml(kakaoChats,'kakao');root.querySelector('[data-back]').addEventListener('click',()=>setMode('home'));root.querySelector('[data-new-chat]').addEventListener('click',()=>{const name=prompt('새 대화 상대 이름을 입력해 주세요.');if(!name||!name.trim())return;const id='visitor-kakao-'+Date.now();visitorKakaoData.extraChats.unshift({id,name:name.trim(),avatar:name.trim().slice(0,1),color:'#e1e5f7',preview:'새로운 대화',time:'지금',unread:0,messages:[]});safeSave(chatStoreKeys.kakao,visitorKakaoData);kakaoChats=buildChats(baseKakao,visitorKakaoData);renderKakao();toast('이 브라우저에 새 대화방을 만들었어요.');});root.querySelectorAll('[data-chat]').forEach(btn=>btn.addEventListener('click',()=>{currentThread={app:'kakao',id:btn.dataset.chat};visitorKakaoData.read[btn.dataset.chat]=true;safeSave(chatStoreKeys.kakao,visitorKakaoData);kakaoChats=buildChats(baseKakao,visitorKakaoData);renderKakao();}));return;}
+ const chat=kakaoChats.find(c=>c.id===currentThread.id);if(!chat){currentThread=null;renderKakao();return;}root.innerHTML=appHeader('',{className:'thread-header',right:'<button class="app-tool-btn" title="더 보기">⋯</button>'}).replace('<strong></strong>',`<span class="thread-contact">${avatarHtml(chat)}<span><strong>${escapeHtml(chat.name)}</strong><small>${chat.isGroup?`단체 대화 · ${chat.memberCount||'여러 명'}명`:'카카오톡 · 가상 대화'}</small></span></span>`)+`<div class="app-scroll" id="threadScroll"><div class="thread-messages"><div class="day-divider">오늘 ${escapeHtml(defaultDateLabel)}</div>${chat.messages.map(m=>`<div class="bubble-line ${m.from==='me'?'mine':''}">${m.from==='them'?`<span class="bubble-name">${escapeHtml(m.sender||chat.name)}</span>`:''}<div class="bubble">${escapeHtml(m.text)}</div><span class="bubble-time">${escapeHtml(m.time||'지금')}</span></div>`).join('')}</div></div><form class="compose-bar" id="chatForm"><input id="chatInput" autocomplete="off" maxlength="300" placeholder="메시지 입력" aria-label="메시지 입력"><button class="send-btn" type="submit" aria-label="보내기">➤</button></form>`;root.querySelector('[data-back]').addEventListener('click',()=>{currentThread=null;renderKakao();});bindSend(chat,'kakao');scrollThread();}
+function renderSms(){const root=$('appView');if(!currentThread){root.innerHTML=appHeader('메시지',{className:'sms-head',right:'<button class="app-tool-btn" data-new-chat title="새 메시지">＋</button>'})+chatListHtml(smsChats,'messages');root.querySelector('[data-back]').addEventListener('click',()=>setMode('home'));root.querySelector('[data-new-chat]').addEventListener('click',()=>{const name=prompt('새 메시지 상대 이름을 입력해 주세요.');if(!name||!name.trim())return;const id='visitor-sms-'+Date.now();visitorSmsData.extraChats.unshift({id,name:name.trim(),avatar:name.trim().slice(0,1),color:'#dce9f8',preview:'새 메시지',time:'지금',unread:0,messages:[]});safeSave(chatStoreKeys.messages,visitorSmsData);smsChats=buildChats(baseSms,visitorSmsData);renderSms();});root.querySelectorAll('[data-chat]').forEach(btn=>btn.addEventListener('click',()=>{currentThread={app:'messages',id:btn.dataset.chat};visitorSmsData.read[btn.dataset.chat]=true;safeSave(chatStoreKeys.messages,visitorSmsData);smsChats=buildChats(baseSms,visitorSmsData);renderSms();}));return;}
  const chat=smsChats.find(c=>c.id===currentThread.id);if(!chat){currentThread=null;renderSms();return;}root.innerHTML=appHeader('',{className:'thread-header',right:'<button class="app-tool-btn" title="정보">ⓘ</button>'}).replace('<strong></strong>',`<span class="thread-contact">${avatarHtml(chat)}<span><strong>${escapeHtml(chat.name)}</strong><small>메시지 · 가상 대화</small></span></span>`)+`<div class="app-scroll" id="threadScroll"><div class="thread-messages">${chat.messages.map(m=>`<div class="sms-bubble ${m.from==='me'?'mine':''}">${escapeHtml(m.text)}<div style="font-size:6px;opacity:.68;text-align:right;margin-top:3px">${escapeHtml(m.time||'지금')}</div></div>`).join('')}</div></div><form class="compose-bar" id="chatForm"><input id="chatInput" autocomplete="off" maxlength="300" placeholder="메시지 입력" aria-label="메시지 입력"><button class="send-btn" type="submit" aria-label="보내기">➤</button></form>`;root.querySelector('[data-back]').addEventListener('click',()=>{currentThread=null;renderSms();});bindSend(chat,'messages');scrollThread();}
-function bindSend(chat,app){const form=$('chatForm'),input=$('chatInput');form.addEventListener('submit',e=>{e.preventDefault();const text=input.value.trim();if(!text)return;chat.messages.push({from:'me',text,time:'오후 '+new Date().toLocaleTimeString('ko-KR',{hour:'2-digit',minute:'2-digit',hour12:true})});chat.preview=text;chat.time='지금';if(app==='kakao'){safeSave('meteora-kakao-chats-v1',kakaoChats);renderKakao();}else{safeSave('meteora-sms-chats-v1',smsChats);renderSms();}scrollThread();});}
+function bindSend(chat,app){
+ const form=$('chatForm'),input=$('chatInput');form.addEventListener('submit',e=>{
+  e.preventDefault();const text=input.value.trim();if(!text)return;
+  const message={from:'me',text,time:new Date().toLocaleTimeString('ko-KR',{hour:'2-digit',minute:'2-digit',hour12:true})};
+  const isKakao=app==='kakao',data=isKakao?visitorKakaoData:visitorSmsData,base=isKakao?baseKakao:baseSms,key=isKakao?chatStoreKeys.kakao:chatStoreKeys.messages;const isCanonical=base.some(c=>c.id===chat.id);
+  if(isCanonical){data.replies[chat.id]=data.replies[chat.id]||[];data.replies[chat.id].push(message);data.read[chat.id]=true;}
+  else{const personal=data.extraChats.find(c=>c.id===chat.id);if(personal){personal.messages.push(message);personal.preview=text;personal.time='지금';}}
+  safeSave(key,data);if(isKakao)kakaoChats=buildChats(baseKakao,visitorKakaoData);else smsChats=buildChats(baseSms,visitorSmsData);if(isKakao)renderKakao();else renderSms();scrollThread();
+  const normalized=text.replace(/[\s.!。！？?,，]/g,'');
+  if(isKakao&&chat.id==='geo'&&normalized==='지오야나사랑해'){
+   setTimeout(()=>deliverIncomingMessage({type:'message',app:'kakao',chatId:'geo',sender:'지오',text:'부르셨습니까? 나 사랑합니다.'}),850);
+  }
+ });
+}
 function scrollThread(){const el=$('threadScroll');if(el)el.scrollTop=el.scrollHeight;}
 function renderCalendar(){const root=$('appView');const y=shownMonth.getFullYear(),m=shownMonth.getMonth();const first=new Date(y,m,1).getDay(),days=new Date(y,m+1,0).getDate(),prevDays=new Date(y,m,0).getDate();let cells='';for(let i=0;i<first;i++){const d=prevDays-first+i+1;cells+=`<button type="button" class="calendar-day outside" data-date="${dateKey(new Date(y,m-1,d))}">${d}</button>`;}for(let d=1;d<=days;d++){const date=new Date(y,m,d);const key=dateKey(date),isSelected=key===dateKey(selectedDate),isToday=key===todayKey,has=!!(calendarEvents[key]&&calendarEvents[key].length);cells+=`<button type="button" class="calendar-day ${isSelected?'selected':''} ${isToday?'today':''} ${has?'has-event':''}" data-date="${key}">${d}</button>`;}const remaining=(7-((first+days)%7))%7;for(let d=1;d<=remaining;d++)cells+=`<button type="button" class="calendar-day outside" data-date="${dateKey(new Date(y,m+1,d))}">${d}</button>`;
- const key=dateKey(selectedDate),events=calendarEvents[key]||[];root.innerHTML=appHeader('달력',{right:'<button class="app-tool-btn" data-today>오늘</button>'})+`<div class="app-scroll"><div class="calendar-body"><div class="calendar-month"><button type="button" data-prev aria-label="이전 달">‹</button><strong>${y}년 ${m+1}월</strong><button type="button" data-next aria-label="다음 달">›</button></div><div class="calendar-week"><span style="color:#e36c72">일</span><span>월</span><span>화</span><span>수</span><span>목</span><span>금</span><span style="color:#5877d6">토</span></div><div class="calendar-grid">${cells}</div><div class="event-list"><h4>${selectedDate.getMonth()+1}월 ${selectedDate.getDate()}일 일정</h4>${events.length?events.map((ev,i)=>`<div class="event-item"><span class="event-dot"></span><div class="event-copy"><strong>${escapeHtml(ev.title)}</strong><small>${escapeHtml(ev.time||'시간 미정')}</small></div><button class="delete-event" data-delete-event="${i}" type="button" aria-label="일정 삭제">×</button></div>`).join(''):'<div class="app-empty" style="padding:9px">등록된 일정이 없어요.</div>'}<form class="event-compose" id="eventForm"><input id="eventTime" type="time" value="09:00" aria-label="일정 시간" style="max-width:76px"><input id="eventTitle" type="text" maxlength="80" placeholder="일정 추가하기" aria-label="일정 내용"><button type="submit">추가</button></form></div></div></div>`;
- root.querySelector('[data-back]').addEventListener('click',()=>setMode('home'));root.querySelector('[data-prev]').addEventListener('click',()=>{shownMonth=new Date(y,m-1,1);renderCalendar();});root.querySelector('[data-next]').addEventListener('click',()=>{shownMonth=new Date(y,m+1,1);renderCalendar();});root.querySelector('[data-today]').addEventListener('click',()=>{selectedDate=new Date();selectedDate.setHours(12,0,0,0);shownMonth=new Date(selectedDate.getFullYear(),selectedDate.getMonth(),1);renderCalendar();});root.querySelectorAll('[data-date]').forEach(btn=>btn.addEventListener('click',()=>{const [yy,mm,dd]=btn.dataset.date.split('-').map(Number);selectedDate=new Date(yy,mm-1,dd,12);shownMonth=new Date(yy,mm-1,1);renderCalendar();}));root.querySelectorAll('[data-delete-event]').forEach(btn=>btn.addEventListener('click',()=>{const i=Number(btn.dataset.deleteEvent);calendarEvents[key].splice(i,1);if(!calendarEvents[key].length)delete calendarEvents[key];safeSave('meteora-calendar-v1',calendarEvents);renderHomeDashboard();renderCalendar();}));root.querySelector('#eventForm').addEventListener('submit',e=>{e.preventDefault();const title=$('eventTitle').value.trim();if(!title){toast('일정 내용을 입력해 주세요.');return;}calendarEvents[key]=calendarEvents[key]||[];calendarEvents[key].push({id:'e'+Date.now(),time:$('eventTime').value||'시간 미정',title});safeSave('meteora-calendar-v1',calendarEvents);renderHomeDashboard();renderCalendar();toast('일정을 추가했어요.');});}
-function renderMail(){const root=$('appView');root.innerHTML=appHeader('회사 메일',{right:'<button class="app-tool-btn" data-refresh>↻</button>'})+`<div class="app-scroll"><div class="mail-row">${avatarHtml({avatar:'팀',color:'#dbe4ff'})}<div><strong>김 팀장 · 오후 9:42</strong><p>내일 회의 전에 기획안 최종 수정본을 공유해 주세요.</p></div></div><div class="mail-row">${avatarHtml({avatar:'인',color:'#e6e8f3'})}<div><strong>인사팀 · 오후 5:20</strong><p>[공지] 다음 주 조직 개편 관련 안내드립니다.</p></div></div><div class="mail-row">${avatarHtml({avatar:'시',color:'#f3e0d5'})}<div><strong>시스템 알림 · 오후 2:08</strong><p>비밀번호 만료 예정일은 30일 후입니다.</p></div></div><div class="app-empty">가상의 회사 메일함이에요.<br>실제 이메일 계정에는 연결되지 않아요.</div></div>`;root.querySelector('[data-back]').addEventListener('click',()=>setMode('home'));root.querySelector('[data-refresh]').addEventListener('click',()=>toast('메일함을 새로고침했어요.'));}
+ const key=dateKey(selectedDate),events=calendarEvents[key]||[];root.innerHTML=appHeader('달력',{right:'<button class="app-tool-btn" data-today>오늘</button>'})+`<div class="app-scroll"><div class="calendar-body"><div class="calendar-month"><button type="button" data-prev aria-label="이전 달">‹</button><strong>${y}년 ${m+1}월</strong><button type="button" data-next aria-label="다음 달">›</button></div><div class="calendar-week"><span style="color:#e36c72">일</span><span>월</span><span>화</span><span>수</span><span>목</span><span>금</span><span style="color:#5877d6">토</span></div><div class="calendar-grid">${cells}</div><div class="event-list"><h4>${selectedDate.getMonth()+1}월 ${selectedDate.getDate()}일 일정</h4>${events.length?events.map(ev=>`<div class="event-item"><span class="event-dot"></span><div class="event-copy"><strong>${escapeHtml(ev.title)}</strong><small>${escapeHtml(ev.time||'시간 미정')} · ${ev.source==='visitor'?'내 일정':'🔒 기본 일정'}</small></div>${ev.source==='visitor'?`<button class="delete-event" data-delete-event="${escapeHtml(ev.id)}" type="button" aria-label="내 일정 삭제">×</button>`:''}</div>`).join(''):'<div class="app-empty" style="padding:9px">등록된 일정이 없어요.</div>'}<div class="settings-scope-note">🔒 기본 일정은 수정·삭제할 수 없어요. 아래에서 추가한 일정은 이 브라우저에만 저장돼요.</div><form class="event-compose" id="eventForm"><input id="eventTime" type="time" value="09:00" aria-label="일정 시간" style="max-width:76px"><input id="eventTitle" type="text" maxlength="80" placeholder="내 일정 추가하기" aria-label="일정 내용"><button type="submit">추가</button></form></div></div></div>`;
+ root.querySelector('[data-back]').addEventListener('click',()=>setMode('home'));root.querySelector('[data-prev]').addEventListener('click',()=>{shownMonth=new Date(y,m-1,1);renderCalendar();});root.querySelector('[data-next]').addEventListener('click',()=>{shownMonth=new Date(y,m+1,1);renderCalendar();});root.querySelector('[data-today]').addEventListener('click',()=>{selectedDate=new Date();selectedDate.setHours(12,0,0,0);shownMonth=new Date(selectedDate.getFullYear(),selectedDate.getMonth(),1);renderCalendar();});root.querySelectorAll('[data-date]').forEach(btn=>btn.addEventListener('click',()=>{const [yy,mm,dd]=btn.dataset.date.split('-').map(Number);selectedDate=new Date(yy,mm-1,dd,12);shownMonth=new Date(yy,mm-1,1);renderCalendar();}));root.querySelectorAll('[data-delete-event]').forEach(btn=>btn.addEventListener('click',()=>{const id=btn.dataset.deleteEvent;visitorCalendarEvents[key]=(visitorCalendarEvents[key]||[]).filter(ev=>ev.id!==id);if(!visitorCalendarEvents[key].length)delete visitorCalendarEvents[key];safeSave('meteora-personal-calendar-v2',visitorCalendarEvents);rebuildCalendarEvents();renderHomeDashboard();renderCalendar();}));root.querySelector('#eventForm').addEventListener('submit',e=>{e.preventDefault();const title=$('eventTitle').value.trim();if(!title){toast('일정 내용을 입력해 주세요.');return;}visitorCalendarEvents[key]=visitorCalendarEvents[key]||[];visitorCalendarEvents[key].push({id:'personal-'+Date.now(),source:'visitor',time:$('eventTime').value||'시간 미정',title});safeSave('meteora-personal-calendar-v2',visitorCalendarEvents);rebuildCalendarEvents();renderHomeDashboard();renderCalendar();toast('개인 일정을 이 브라우저에 추가했어요.');});}
+function renderMail(){
+ const root=$('appView'),emails=siteConfig.emails||[];
+ if(activeEmail){const email=emails.find(e=>e.id===activeEmail);if(!email){activeEmail=null;renderMail();return;}root.innerHTML=appHeader('메일 읽기')+`<div class="app-scroll"><div class="mail-detail" style="padding:18px 15px;color:#2a2d3b"><div style="font-size:10px;color:#7d8192">${escapeHtml(email.sender)} · ${escapeHtml(email.time)}</div><h3 style="font-size:15px;line-height:1.5">${escapeHtml(email.subject)}</h3><hr style="border:0;border-top:1px solid #eeeef4;margin:14px 0"><div style="white-space:pre-wrap;font-size:11px;line-height:1.85">${escapeHtml(email.body)}</div><div class="app-empty">🔒 운영자가 설정한 기본 메일 · 읽기 전용</div></div></div>`;root.querySelector('[data-back]').addEventListener('click',()=>{activeEmail=null;renderMail();});return;}
+ root.innerHTML=appHeader('수집상 공식 메일',{right:'<button class="app-tool-btn" data-refresh>↻</button>'})+`<div class="app-scroll">${emails.map((email,i)=>`<button type="button" class="mail-row" data-email="${escapeHtml(email.id)}" style="width:100%;text-align:left;border:0;border-bottom:1px solid #eeeef4;background:transparent;cursor:pointer;padding:12px 14px">${avatarHtml(email)}<div style="flex:1;min-width:0"><strong>${escapeHtml(email.sender)} · ${escapeHtml(email.time)}</strong><p style="font-weight:750;margin:6px 0 4px;font-size:10px">${escapeHtml(email.subject)}</p><p>${escapeHtml(email.body.split('\n')[0].slice(0,75))}</p></div></button>`).join('')}<div class="app-empty">기본 메일은 읽기 전용입니다.<br>실제 이메일 계정에는 연결되지 않는 가상 메일함이에요.</div></div>`;
+ root.querySelector('[data-back]').addEventListener('click',()=>setMode('home'));root.querySelector('[data-refresh]').addEventListener('click',()=>toast('메일함을 새로고침했어요.'));root.querySelectorAll('[data-email]').forEach(btn=>btn.addEventListener('click',()=>{activeEmail=btn.dataset.email;renderMail();}));
+}
 function renderNotes(){const root=$('appView');root.innerHTML=appHeader('Samsung Notes',{right:'<button class="app-tool-btn" data-clear>↺</button>'})+`<div class="app-scroll"><div class="note-app"><textarea id="noteText" maxlength="3000" aria-label="메모 내용">${escapeHtml(getNote())}</textarea><button class="save-note" id="saveNote" type="button">메모 저장</button><div class="app-empty">유성운의 개인 메모 · 이 브라우저에 저장</div></div></div>`;root.querySelector('[data-back]').addEventListener('click',()=>setMode('home'));root.querySelector('#saveNote').addEventListener('click',()=>{try{localStorage.setItem(savedNoteKey,$('noteText').value);}catch(e){}toast('메모를 이 브라우저에 저장했어요.');});root.querySelector('[data-clear]').addEventListener('click',()=>{$('noteText').value='';});}
-function renderGallery(){const root=$('appView');root.innerHTML=appHeader('갤러리')+`<div class="app-scroll"><div style="padding:16px 14px"><div style="height:155px;border-radius:14px;background:linear-gradient(180deg,#101a3c,#7c789b 55%,#1e202b);display:grid;place-items:center;color:#fff;font-size:35px">✦</div><p style="font-size:10px;line-height:1.7;color:#6e7383">현재 배경화면을 바꾸려면 편집 패널에서 사진을 업로드해 주세요. 업로드한 사진은 이 브라우저에서만 처리돼요.</p><button class="save-note" id="goWallpaper" type="button">배경화면 바꾸기 안내</button></div></div>`;root.querySelector('[data-back]').addEventListener('click',()=>setMode('home'));root.querySelector('#goWallpaper').addEventListener('click',()=>toast('왼쪽 편집 패널에서 사진을 선택해 주세요.'));}
+function renderGallery(){const root=$('appView');root.innerHTML=appHeader('갤러리')+`<div class="app-scroll"><div style="padding:16px 14px"><div style="height:155px;border-radius:14px;background:linear-gradient(180deg,#101a3c,#7c789b 55%,#1e202b);display:grid;place-items:center;color:#fff;font-size:35px">✦</div><p style="font-size:10px;line-height:1.7;color:#6e7383">기본 배경은 운영자가 저장소의 meteora-config.js에서 설정합니다. 방문자는 기본 배경을 수정할 수 없습니다.</p><button class="save-note" id="goWallpaper" type="button">배경화면 바꾸기 안내</button></div></div>`;root.querySelector('[data-back]').addEventListener('click',()=>setMode('home'));root.querySelector('#goWallpaper').addEventListener('click',()=>openApp('settings'));}
+const browserHistoryKey='meteora-visitor-browser-history-v1';
+function defaultBrowserSearchItems(){
+ const configured=Array.isArray(siteConfig.browserSearches)?siteConfig.browserSearches:[];
+ const items=configured.map(item=>typeof item==='string'?{query:item,time:'최근'}:{query:item?.query,time:item?.time||'최근'}).filter(item=>item.query);
+ return items.length?items:[{query:'길드장이 괴롭힘',time:'어제'},{query:'직장 내 괴롭힘 신고',time:'어제'},{query:'퇴사하는 법',time:'3일 전'},{query:'수집상 퇴사 절차',time:'3일 전'},{query:'A급 헌터 야간 근무 거부',time:'지난주'}];
+}
+function defaultBrowserQueries(){return defaultBrowserSearchItems().map(item=>item.query);}
+function browserResultsFor(query){
+ const q=String(query||'').toLowerCase();
+ const exit=/퇴사|사직|퇴직|소속 해제|이적/.test(q);
+ const grievance=/괴롭힘|신고|폭언|갑질|부당|길드장|괴롭/.test(q);
+ if(exit){
+  return [
+   {id:'resign-process',source:'수집상 인사행정 포털 · 가상 검색 결과',title:'퇴직 및 소속 해제 절차 안내',snippet:'사직 의사 접수, 장비와 마석 반납, 게이트 기록 인계, 미정산 출동 수당 확인 순으로 진행됩니다.',body:'수집상 소속 해제 안내\n\n1. 인사행정 담당자에게 소속 해제 의사를 문서로 남깁니다.\n2. 지급받은 장비와 마석 측정기를 반납 목록에 맞춰 확인합니다.\n3. 진행 중인 게이트 보고서와 출동 기록을 인계합니다.\n4. 미정산 출동 수당 및 휴무 내역을 확인하고 접수 확인서를 보관합니다.\n\n길드장과의 갈등이나 압박이 이유라면, 소속 해제 절차와 별개로 헌터관리협회 고충상담 창구에 먼저 상담을 요청할 수 있습니다.'},
+   {id:'hunter-transfer',source:'헌터관리협회 · 소속 변경 규정',title:'헌터 소속 변경과 등록 기록 확인',snippet:'등급과 관계없이 소속 변경 시 현장 기록, 장비 인계, 등록 갱신을 확인해야 합니다.',body:'헌터관리협회 소속 변경 안내\n\n소속 변경 신청 전에는 현재 진행 중인 임무, 장비 인계 내역, 출동 수당 정산 상태를 확인하세요. 본 검색 화면은 유성운의 세계관을 위한 가상 안내입니다.'},
+   {id:'anonymous-board',source:'헌터 익명 게시판 · 게시글',title:'길드에서 나가고 싶을 때 무엇부터 확인해야 할까요?',snippet:'감정적으로 사직서를 보내기 전, 업무 기록과 개인 보관 자료를 정리했다는 경험담이 이어집니다.',body:'익명 게시판\n\n“일단 내가 맡은 임무와 이미 제출한 보고서 목록을 따로 정리해 두세요. 장비 인계나 수당 정산을 말로만 진행하지 말고 접수 기록을 남기는 게 좋았습니다.”\n\n※ 가상 인물과 가상 게시글입니다.'}
+  ];
+ }
+ if(grievance){
+  return [
+   {id:'grievance-center',source:'헌터관리협회 · 고충상담센터',title:'길드장·상급자 관련 고충 접수 안내',snippet:'반복적인 폭언, 모욕, 부당한 업무 지시 등으로 어려움을 겪는 헌터를 위한 별도 상담 창구입니다.',body:'헌터관리협회 고충상담센터\n\n길드장 또는 상급자와 관련된 고충은 해당 인물의 승인에 의존하지 않는 외부 상담 창구에 접수할 수 있습니다.\n\n상담 전에 도움이 되는 기록:\n• 날짜와 시간, 장소\n• 구체적으로 있었던 말과 행동\n• 관련 업무 지시나 근무 일정\n• 메시지, 이메일 등 보관 가능한 기록\n• 상황을 알고 있는 목격자\n\n이 페이지는 Meteora 세계관의 가상 기관 안내입니다.'},
+   {id:'workplace-bullying',source:'노무 정보 검색 · 안내 글',title:'직장 내 괴롭힘 신고를 고민할 때 정리할 내용',snippet:'상황을 날짜별로 기록하고, 보관 가능한 자료를 원본 그대로 유지하며, 안전한 상담 창구를 찾는 방법을 안내합니다.',body:'직장 내 괴롭힘 대응에 관한 일반 정보\n\n어려움을 겪고 있다면 사건별로 날짜, 장소, 구체적 상황과 관련 자료를 기록해 두는 것이 상담 과정에서 도움이 될 수 있습니다. 메시지나 업무 지시를 정리할 때는 원본을 보존하고, 혼자 대응하기 어렵다면 신뢰할 수 있는 외부 상담 창구를 이용하세요.\n\n실제 신고 기관과 절차는 현실의 근무 형태와 관할에 따라 다를 수 있습니다. 본 결과는 캐릭터 휴대폰 안에 배치한 시뮬레이션 콘텐츠입니다.'},
+   {id:'anonymous-grievance',source:'헌터 커뮤니티 · 익명 상담 게시판',title:'길드장이 괴롭힐 때 길드 밖에 도움을 요청할 수 있나요?',snippet:'“직속 상관에게 말하기 어렵다면 협회 고충창구부터 확인해 보라”는 경험담과 댓글이 보입니다.',body:'익명 상담 게시판\n\n작성자: 잔류마력_031\n“길드장 본인에 대한 문제라 직접 보고하기가 두려운데, 협회 고충창구는 길드 내부 보고와 별개로 상담을 받을 수 있다고 안내되어 있었습니다.”\n\n댓글: 북부게이트_12\n“메시지와 업무 지시를 날짜별로 따로 보관했고, 상담 때 순서대로 설명하니 정리가 됐어요.”\n\n※ 가상 게시글이며 실제 제도 안내를 대신하지 않습니다.'}
+  ];
+ }
+ return [
+  {id:'search-hunter-work',source:'헌터관리협회 · 업무 안내',title:'A급 헌터의 야간 출동과 보고서 처리 안내',snippet:'연속 출동 이후의 보고서 제출 및 귀환 확인 절차를 설명합니다.',body:'헌터관리협회 업무 안내\n\n출동 기록과 귀환 상태를 확인한 뒤 보고서를 제출합니다. 체력 회복이 필요한 경우 담당 관제팀과 출동관리 담당자에게 현재 상태를 알리고 다음 배정 내용을 확인하세요.\n\n이 페이지는 세계관용 가상 콘텐츠입니다.'},
+  {id:'search-sujipsang',source:'수집상 내부 포털 · 공지',title:'야간 업무 및 출동 일정 확인',snippet:'현재 배정된 야간 출동, 현장 보고서 기한, 장비 반납 일정을 확인할 수 있습니다.',body:'수집상 내부 포털\n\n유성운 헌터의 야간 출동 및 보고서 업무 관련 검색 결과입니다. 본 포털은 캐릭터의 휴대폰을 위한 가상 페이지입니다.'},
+  {id:'search-community',source:'헌터 익명 커뮤니티',title:'최근 헌터들의 업무·길드 관련 질문',snippet:'야간 근무, 소속 변경, 길드 내 고충 상담에 대한 최근 글이 모여 있습니다.',body:'헌터 익명 커뮤니티\n\n길드 생활과 근무 문제에 대해 헌터들이 의견을 나누는 가상 게시판입니다.'}
+ ];
+}
+function saveBrowserSearch(query){
+ const clean=String(query||'').trim();if(!clean)return;
+ const items=safeLoad(browserHistoryKey,[]).filter(item=>String(item.query||'').toLowerCase()!==clean.toLowerCase());
+ items.unshift({query:clean,time:new Date().toLocaleTimeString('ko-KR',{hour:'2-digit',minute:'2-digit',hour12:false})});
+ safeSave(browserHistoryKey,items.slice(0,12));
+}
+function browserSearchFormHtml(value=''){
+ return `<form class="browser-search-form" id="browserSearchForm"><span class="browser-search-symbol">⌕</span><input id="browserQuery" type="search" aria-label="인터넷 검색" placeholder="검색어 또는 주소 입력" value="${escapeHtml(value)}" autocomplete="off"><button type="submit" aria-label="검색">검색</button></form>`;
+}
+function renderInternet(query=null){
+ const root=$('appView');
+ const history=safeLoad(browserHistoryKey,[]);
+ const defaults=defaultBrowserSearchItems();
+ let inner='';
+ if(query===null){
+  const historyHtml=history.map(item=>`<button type="button" class="browser-history-item" data-browser-query="${escapeHtml(item.query)}"><span class="browser-history-clock">◷</span><span>${escapeHtml(item.query)}</span><b>↗</b></button>`).join('');
+  const customQueries=new Set(history.map(item=>String(item.query||'').toLowerCase()));
+  const defaultsHtml=defaults.filter(item=>!customQueries.has(item.query.toLowerCase())).map(item=>`<button type="button" class="browser-history-item browser-default-query" data-browser-query="${escapeHtml(item.query)}"><span class="browser-history-clock">◷</span><span class="browser-history-query">${escapeHtml(item.query)}</span><small class="browser-history-time">${escapeHtml(item.time)}</small><b>↗</b></button>`).join('');
+  inner=`<div class="browser-page-head"><div class="browser-brand-mark">◎</div><div><strong>Samsung Internet</strong><small>유성운의 검색 기록</small></div></div>${browserSearchFormHtml()}<div class="browser-section-title">최근 검색</div><div class="browser-history-list">${historyHtml}${defaultsHtml}</div><div class="browser-note">최근 검색어는 이 브라우저의 체험 기록에만 추가됩니다. 아래 기본 검색어는 유성운의 휴대폰에 남아 있던 가상 기록입니다.</div><div class="browser-shortcuts"><span>빠른 접속</span><div><button type="button" data-browser-query="수집상 퇴사 절차">수집상 인사행정</button><button type="button" data-browser-query="헌터관리협회 고충 상담">헌터관리협회</button></div></div>`;
+  root.innerHTML=appHeader('인터넷',{right:'<span class="browser-top-label">시크릿 아님</span>'})+`<div class="app-scroll browser-app">${inner}</div>`;
+  root.querySelector('[data-back]').addEventListener('click',()=>setMode('home'));
+  const form=$('browserSearchForm');form.addEventListener('submit',e=>{e.preventDefault();const q=$('browserQuery').value.trim();if(q)openBrowserQuery(q);});
+  root.querySelectorAll('[data-browser-query]').forEach(b=>b.addEventListener('click',()=>openBrowserQuery(b.dataset.browserQuery)));
+ } else {
+  const results=browserResultsFor(query);
+  inner=`<div class="browser-result-top">${browserSearchFormHtml(query)}<div class="browser-results-caption">검색 결과 · 약 ${results.length}개</div></div><div class="browser-results">${results.map((r,i)=>`<button type="button" class="browser-result-card" data-browser-result="${escapeHtml(r.id)}"><small>${escapeHtml(r.source)}</small><strong>${escapeHtml(r.title)}</strong><p>${escapeHtml(r.snippet)}</p><em>${i===0?'상위 결과':i===1?'관련 안내':'관련 게시글'}</em></button>`).join('')}<div class="browser-fiction-note">일부 검색 결과는 유성운의 세계관에 맞춘 가상 페이지입니다.</div></div>`;
+  root.innerHTML=appHeader('인터넷')+`<div class="app-scroll browser-app">${inner}</div>`;
+  root.querySelector('[data-back]').addEventListener('click',()=>renderInternet(null));
+  const form=$('browserSearchForm');form.addEventListener('submit',e=>{e.preventDefault();const q=$('browserQuery').value.trim();if(q)openBrowserQuery(q);});
+  root.querySelectorAll('[data-browser-result]').forEach(b=>b.addEventListener('click',()=>{const result=results.find(r=>r.id===b.dataset.browserResult);if(result)renderBrowserArticle(query,result);}));
+ }
+}
+function openBrowserQuery(query){const q=String(query||'').trim();if(!q)return;saveBrowserSearch(q);renderInternet(q);}
+function renderBrowserArticle(query,result){
+ const root=$('appView');
+ root.innerHTML=appHeader('인터넷',{right:'<button type="button" class="app-tool-btn" data-browser-results>검색 결과</button>'})+`<div class="app-scroll browser-app"><article class="browser-article"><div class="browser-article-source">${escapeHtml(result.source)}</div><h2>${escapeHtml(result.title)}</h2><p class="browser-article-summary">${escapeHtml(result.snippet)}</p><div class="browser-article-rule"></div><div class="browser-article-body">${escapeHtml(result.body)}</div><button type="button" class="browser-return-results" data-browser-results>‹ 검색 결과로 돌아가기</button></article></div>`;
+ root.querySelector('[data-back]').addEventListener('click',()=>renderInternet(query));
+ root.querySelectorAll('[data-browser-results]').forEach(b=>b.addEventListener('click',()=>renderInternet(query)));
+}
+
 function renderUtility(app){
  const names={phone:'전화',internet:'Samsung Internet',camera:'카메라'};const root=$('appView');
+ if(app==='internet'){renderInternet();return;}
  if(app==='phone'){
   let dialValue='';let calls=safeLoad('meteora-visitor-call-log-v1',[]);
-  root.innerHTML=appHeader('전화')+`<div class="app-scroll phone-app"><div class="phone-tabs"><button type="button" class="phone-tab active" data-phone-tab="keypad">키패드</button><button type="button" class="phone-tab" data-phone-tab="recent">최근기록 <span>${calls.length}</span></button></div><section id="phoneKeypadPane"><div class="dial-display"><div class="dial-number" id="dialNumber">${escapeHtml(dialValue||'번호 입력')}</div><div class="dial-caption">가상 통화 · 실제 전화는 연결되지 않아요</div></div><div class="dial-grid">${['1','2','3','4','5','6','7','8','9','*','0','#'].map(n=>`<button type="button" class="dial-key" data-dial="${n}"><strong>${n}</strong><small>${({'2':'ABC','3':'DEF','4':'GHI','5':'JKL','6':'MNO','7':'PQRS','8':'TUV','9':'WXYZ'})[n]||''}</small></button>`).join('')}</div><div class="dial-actions"><button type="button" class="dial-delete" data-dial-delete aria-label="한 글자 지우기">⌫</button><button type="button" class="dial-call" data-dial-call aria-label="가상 통화 시작">☎</button><button type="button" class="dial-delete" data-dial-clear aria-label="번호 지우기">×</button></div><div class="phone-suggest"><span>빠른 연락</span><button type="button" data-contact="유성운|010-0000-1024">유성운 <small>가상 연락처</small></button><button type="button" data-contact="김 팀장|010-0000-2048">김 팀장 <small>가상 연락처</small></button></div></section><section id="phoneRecentPane" hidden><div class="call-log-list">${calls.length?calls.map((c,i)=>`<button type="button" class="call-log-row" data-call-back="${i}"><span class="call-log-icon ${c.kind==='out'?'outgoing':''}">${c.kind==='out'?'↗':'↙'}</span><span class="call-log-copy"><strong>${escapeHtml(c.name||c.number)}</strong><small>${escapeHtml(c.number)} · ${escapeHtml(c.when||'방금 전')}</small></span><span class="call-log-type">${escapeHtml(c.status||'가상 통화')}</span></button>`).join(''):'<div class="app-empty">최근 통화가 없어요.<br>키패드에서 번호를 입력해 체험해 보세요.</div>'}</div><button type="button" class="clear-call-log" data-clear-log>기록 지우기</button></section></div>`;
+  root.innerHTML=appHeader('전화')+`<div class="app-scroll phone-app"><div class="phone-tabs"><button type="button" class="phone-tab active" data-phone-tab="keypad">키패드</button><button type="button" class="phone-tab" data-phone-tab="recent">최근기록 <span>${calls.length}</span></button></div><section id="phoneKeypadPane"><div class="dial-display"><div class="dial-number" id="dialNumber">${escapeHtml(dialValue||'번호 입력')}</div><div class="dial-caption">가상 통화 · 실제 전화는 연결되지 않아요</div></div><div class="dial-grid">${['1','2','3','4','5','6','7','8','9','*','0','#'].map(n=>`<button type="button" class="dial-key" data-dial="${n}"><strong>${n}</strong><small>${({'2':'ABC','3':'DEF','4':'GHI','5':'JKL','6':'MNO','7':'PQRS','8':'TUV','9':'WXYZ'})[n]||''}</small></button>`).join('')}</div><div class="dial-actions"><button type="button" class="dial-delete" data-dial-delete aria-label="한 글자 지우기">⌫</button><button type="button" class="dial-call" data-dial-call aria-label="가상 통화 시작">☎</button><button type="button" class="dial-delete" data-dial-clear aria-label="번호 지우기">×</button></div><div class="phone-suggest"><span>연락처 · 가상 번호</span>${(siteConfig.phoneContacts||[]).map(c=>`<button type="button" data-contact="${escapeHtml(c.name+'|'+c.number)}">${escapeHtml(c.name)} <small>${escapeHtml(c.detail||'연락처')}</small></button>`).join('')}</div></section><section id="phoneRecentPane" hidden><div class="call-log-list">${calls.length?calls.map((c,i)=>`<button type="button" class="call-log-row" data-call-back="${i}"><span class="call-log-icon ${c.kind==='out'?'outgoing':''}">${c.kind==='out'?'↗':'↙'}</span><span class="call-log-copy"><strong>${escapeHtml(c.name||c.number)}</strong><small>${escapeHtml(c.number)} · ${escapeHtml(c.when||'방금 전')}</small></span><span class="call-log-type">${escapeHtml(c.status||'가상 통화')}</span></button>`).join(''):'<div class="app-empty">최근 통화가 없어요.<br>키패드에서 번호를 입력해 체험해 보세요.</div>'}</div><button type="button" class="clear-call-log" data-clear-log>기록 지우기</button></section></div>`;
   root.querySelector('[data-back]').addEventListener('click',()=>setMode('home'));
   const showTab=tab=>{root.querySelectorAll('[data-phone-tab]').forEach(b=>b.classList.toggle('active',b.dataset.phoneTab===tab));$('phoneKeypadPane').hidden=tab!=='keypad';$('phoneRecentPane').hidden=tab!=='recent';};
   root.querySelectorAll('[data-phone-tab]').forEach(b=>b.addEventListener('click',()=>showTab(b.dataset.phoneTab)));
@@ -293,7 +710,17 @@ function renderUtility(app){
   root.querySelector('[data-dial-delete]').addEventListener('click',()=>{dialValue=dialValue.slice(0,-1);$('dialNumber').textContent=dialValue||'번호 입력';});
   root.querySelector('[data-dial-clear]').addEventListener('click',()=>{dialValue='';$('dialNumber').textContent='번호 입력';});
   root.querySelectorAll('[data-contact]').forEach(b=>b.addEventListener('click',()=>{const [name,num]=b.dataset.contact.split('|');dialValue=num;$('dialNumber').textContent=dialValue; }));
-  const startCall=()=>{if(!dialValue.trim()){toast('먼저 전화번호를 입력해 주세요.');return;}const number=dialValue;const contact=number==='010-0000-1024'?'유성운':number==='010-0000-2048'?'김 팀장':number;const entry={name:contact,number,kind:'out',status:'응답 없음 · 시뮬레이션',when:new Date().toLocaleString('ko-KR',{month:'numeric',day:'numeric',hour:'2-digit',minute:'2-digit'})};calls.unshift(entry);calls=calls.slice(0,30);safeSave('meteora-visitor-call-log-v1',calls);root.innerHTML=appHeader('가상 통화')+`<div class="app-scroll call-screen"><div class="call-avatar">${escapeHtml(contact.slice(0,1))}</div><h3>${escapeHtml(contact)}</h3><p>${escapeHtml(number)}</p><div class="call-status" id="callStatus">연결 중…</div><p class="call-disclaimer">실제 전화가 걸리지 않는 체험용 화면입니다.</p><button type="button" class="end-call" id="endCall">●</button><span class="end-call-label">통화 종료</span></div>`;root.querySelector('[data-back]').addEventListener('click',()=>setMode('home'));root.querySelector('#endCall').addEventListener('click',()=>{toast('가상 통화를 종료했어요.');renderUtility('phone');const recent=$('appView').querySelector('[data-phone-tab="recent"]');if(recent)recent.click();});setTimeout(()=>{const status=$('callStatus');if(status)status.textContent='응답 없음';},1600);};
+  const startCall=()=>{
+   if(!dialValue.trim()){toast('먼저 전화번호를 입력해 주세요.');return;}
+   const number=dialValue;const digits=number.replace(/\D/g,'');const info=(siteConfig.phoneContacts||[]).find(c=>String(c.number).replace(/\D/g,'')===digits);const contact=info?.name||number;const isGeo=info?.specialCall==='geo';
+   const entry={name:contact,number,kind:'out',status:isGeo?'통화 중':'응답 없음 · 가상 체험',when:new Date().toLocaleString('ko-KR',{month:'numeric',day:'numeric',hour:'2-digit',minute:'2-digit'})};calls.unshift(entry);calls=calls.slice(0,30);safeSave('meteora-visitor-call-log-v1',calls);
+   root.innerHTML=appHeader('가상 통화')+`<div class="app-scroll call-screen"><div class="call-avatar">${escapeHtml(contact.slice(0,1))}</div><h3>${escapeHtml(contact)}</h3><p>${escapeHtml(number)}</p><div class="call-status" id="callStatus">연결 중…</div><div id="outgoingGeoCaption" class="settings-scope-note" style="display:none;max-width:100%;margin:20px 0 0;text-align:left"></div><p class="call-disclaimer">실제 전화가 걸리지 않는 체험용 화면입니다.</p><button type="button" class="end-call" id="endCall">●</button><span class="end-call-label">통화 종료</span></div>`;
+   root.querySelector('[data-back]').addEventListener('click',()=>{finished=true;entry.status=isGeo?'통화 종료 · 가상 체험':'응답 없음 · 가상 체험';safeSave('meteora-visitor-call-log-v1',calls);renderUtility('phone');});
+   let finished=false;const finish=()=>{if(finished)return;finished=true;entry.status=isGeo?'통화 완료 · 자동 종료':'통화 종료 · 가상 체험';safeSave('meteora-visitor-call-log-v1',calls);toast(isGeo?'지오와의 가상 통화가 끝났어요.':'가상 통화를 종료했어요.');renderUtility('phone');const recent=$('appView').querySelector('[data-phone-tab="recent"]');if(recent)recent.click();};
+   root.querySelector('#endCall').addEventListener('click',finish);
+   if(isGeo){setTimeout(()=>{if(finished||!$('callStatus'))return;$('callStatus').textContent='지오 연결됨';const caption=$('outgoingGeoCaption');caption.style.display='block';caption.innerHTML='<strong>지오</strong><br><br>유성운 씨? 저도 사랑합니다.';},900);setTimeout(finish,4200);}
+   else{setTimeout(()=>{const status=$('callStatus');if(status&&!finished)status.textContent='응답 없음';},1600);}
+  };
   root.querySelector('[data-dial-call]').addEventListener('click',startCall);
   root.querySelectorAll('[data-call-back]').forEach(b=>b.addEventListener('click',()=>{dialValue=calls[Number(b.dataset.callBack)].number;showTab('keypad');$('dialNumber').textContent=dialValue;}));
   root.querySelector('[data-clear-log]').addEventListener('click',()=>{calls=[];safeSave('meteora-visitor-call-log-v1',calls);renderUtility('phone');const recent=$('appView').querySelector('[data-phone-tab="recent"]');if(recent)recent.click();});
@@ -302,10 +729,12 @@ function renderUtility(app){
   root.innerHTML=appHeader(names[app])+`<div class="app-scroll">${content}</div>`;root.querySelector('[data-back]').addEventListener('click',()=>setMode('home'));
  }
 }
-function openApp(app){activeMode='app';activeApp=app;currentThread=null;showAppView();renderHomeDashboard();$('homeModeBtn').classList.remove('active');$('lockModeBtn').classList.remove('active');if(app==='kakao')renderKakao();else if(app==='messages')renderSms();else if(app==='calendar')renderCalendar();else if(app==='mail')renderMail();else if(app==='notes')renderNotes();else if(app==='gallery')renderGallery();else renderUtility(app);}
+function openApp(app){startIncomingScenario();activeMode='app';activeApp=app;currentThread=null;showAppView();renderHomeDashboard();$('homeModeBtn').classList.remove('active');$('lockModeBtn').classList.remove('active');if(app==='kakao')renderKakao();else if(app==='messages')renderSms();else if(app==='calendar')renderCalendar();else if(app==='mail')renderMail();else if(app==='notes')renderNotes();else if(app==='gallery')renderGallery();else if(app==='settings')renderSettings();else if(app==='weather')renderWeather();else if(app==='reminders')renderReminders();else renderUtility(app);updateChatBadges();}
 document.querySelectorAll('[data-app]').forEach(btn=>btn.addEventListener('click',()=>openApp(btn.dataset.app)));
 $('homeModeBtn').addEventListener('click',()=>setMode('home'));$('lockModeBtn').addEventListener('click',()=>setMode('lock'));$('navHome').addEventListener('click',()=>setMode('home'));
 $('openHomeCalendar').addEventListener('click',()=>openApp('calendar'));
+const weatherWidget=document.querySelector('.weather-mini');if(weatherWidget){weatherWidget.addEventListener('click',()=>openApp('weather'));weatherWidget.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openApp('weather');}});}
+$('openReminders').addEventListener('click',()=>openApp('reminders'));
 $('addQuickEvent').addEventListener('click',()=>openApp('calendar'));
 $('openMailWidget').addEventListener('click',()=>openApp('mail'));
 $('mailWidgetContent').addEventListener('click',()=>openApp('notes'));
@@ -313,15 +742,15 @@ $('editMailWidget').addEventListener('click',()=>openApp('notes'));
 $('refreshMailWidget').addEventListener('click',()=>{renderHomeDashboard();toast('위젯을 새로고침했어요.');});
 $('navRecent').addEventListener('click',()=>{if(activeMode==='app'){setMode('home');}else{toast('최근 실행한 앱이 없어요.');}});
 $('navBack').addEventListener('click',()=>{if(activeMode==='app'){setMode('home');}else if(activeMode==='lock'){setMode('home');}else{toast('홈 화면이에요.');}});
-$('photoInput').addEventListener('change',e=>{const file=e.target.files&&e.target.files[0];if(!file)return;if(!file.type.startsWith('image/')){toast('이미지 파일을 선택해 주세요.');return;}const reader=new FileReader();reader.onload=()=>{photoData=reader.result;setWallpaper();$('uploadTitle').textContent=file.name;$('uploadSub').textContent='사진이 배경화면에 적용됐어요.';toast('배경화면을 바꿨어요.');};reader.readAsDataURL(file);});
-$('removePhoto').addEventListener('click',()=>{photoData=null;$('photoInput').value='';setWallpaper();$('uploadTitle').textContent='라벤더 퍼플 기본 배경';$('uploadSub').textContent='기본 배경 또는 내 사진을 사용할 수 있어요.';toast('기본 배경으로 돌아왔어요.');});
+$('photoInput').addEventListener('change',()=>toast('공유 기본 배경은 운영자만 바꿀 수 있어요.')); 
+$('removePhoto').addEventListener('click',()=>toast('공유 기본 배경은 운영자만 바꿀 수 있어요.')); 
 $('addNotification').addEventListener('click',()=>{if(notificationData.length>=8){toast('알림은 최대 8개까지 추가할 수 있어요.');return;}notificationData.push({app:'새 알림',message:'표시할 메시지를 입력하세요.'});renderEditors();});
 ['screenTime','dateText','greetingText','showStatus','showNotifications'].forEach(id=>$(id).addEventListener('input',updateValues));
-$('downloadBtn').addEventListener('click',async()=>{
+const exportBtn=$('downloadBtn');if(exportBtn)exportBtn.addEventListener('click',async()=>{
  try{
   const W=810,H=1760,canvas=document.createElement('canvas');canvas.width=W;canvas.height=H;const x=canvas.getContext('2d');
   const rr=(ctx,xx,yy,ww,hh,r,color)=>{ctx.beginPath();ctx.moveTo(xx+r,yy);ctx.arcTo(xx+ww,yy,xx+ww,yy+hh,r);ctx.arcTo(xx+ww,yy+hh,xx,yy+hh,r);ctx.arcTo(xx,yy+hh,xx,yy,r);ctx.arcTo(xx,yy,xx+ww,yy,r);ctx.closePath();ctx.fillStyle=color;ctx.fill();};
-  if(photoData){const img=new Image();img.src=photoData;await new Promise((res,rej)=>{img.onload=res;img.onerror=rej;});const scale=Math.max(W/img.width,H/img.height),iw=img.width*scale,ih=img.height*scale;x.drawImage(img,(W-iw)/2,(H-ih)/2,iw,ih);}
+  const exportWallpaper=(activeMode==='lock'?wallpaperConfig.lock:wallpaperConfig.home)||photoData;if(exportWallpaper){const img=new Image();img.src=exportWallpaper;await new Promise((res,rej)=>{img.onload=res;img.onerror=rej;});const scale=Math.max(W/img.width,H/img.height),iw=img.width*scale,ih=img.height*scale;x.drawImage(img,(W-iw)/2,(H-ih)/2,iw,ih);}
   else{const g=x.createLinearGradient(0,0,W,H);g.addColorStop(0,'#86a5c5');g.addColorStop(.32,'#a9b5d1');g.addColorStop(.63,'#c3b5d4');g.addColorStop(1,'#d2a6bb');x.fillStyle=g;x.fillRect(0,0,W,H);x.fillStyle='rgba(235,238,253,.17)';x.beginPath();x.ellipse(135,830,520,700,-.35,0,Math.PI*2);x.fill();x.fillStyle='rgba(255,224,236,.18)';x.beginPath();x.ellipse(780,1360,440,550,-.45,0,Math.PI*2);x.fill();}
   if(activeMode==='app'){
    x.fillStyle='rgba(38,35,55,.14)';x.fillRect(0,0,W,H);rr(x,20,75,W-40,H-112,30,'#f7f7fb');
@@ -342,14 +771,14 @@ $('downloadBtn').addEventListener('click',async()=>{
   }else{
    // Status bar and calm Galaxy-style home widgets.
    x.fillStyle='#333747';x.font='bold 19px Arial,sans-serif';x.textAlign='left';x.fillText(timeText(),30,35);x.textAlign='right';x.fillText('⌁ ▮ ▰ 78%',W-30,35);x.textAlign='left';
-   x.fillStyle='#f5f5fa';x.font='52px Georgia,serif';x.fillText('☾',72,190);x.font='bold 28px Arial,"Noto Sans KR",sans-serif';x.fillText('13°',145,174);x.font='19px Arial,"Noto Sans KR",sans-serif';x.fillText('⌖ 오남읍',145,204);
+   x.fillStyle='#f5f5fa';x.font='52px Georgia,serif';x.fillText('☾',72,190);x.font='bold 28px Arial,"Noto Sans KR",sans-serif';x.fillText(siteConfig.weather?.temperature||'13°',145,174);x.font='19px Arial,"Noto Sans KR",sans-serif';x.fillText('⌖ '+(siteConfig.weather?.region||'서울'),145,204);
    x.textAlign='right';x.font='20px Arial,"Noto Sans KR",sans-serif';x.fillText($('dateText').value,W-42,164);x.font='bold 29px Arial,sans-serif';x.fillText(timeText(),W-42,203);x.textAlign='left';
    const calX=35,calY=285,calW=360;x.fillStyle='#2e3040';x.textAlign='center';x.font='bold 28px Arial,"Noto Sans KR",sans-serif';x.fillText(`${shownMonth.getMonth()+1}월`,calX+calW/2,calY);x.font='bold 17px Arial,"Noto Sans KR",sans-serif';const weekdays=['일','월','화','수','목','금','토'];const colW=calW/7;weekdays.forEach((d,i)=>{x.fillStyle=i===0?'#db617b':i===6?'#4576c1':'#373948';x.fillText(d,calX+colW*(i+.5),calY+43);});
    const first=new Date(shownMonth.getFullYear(),shownMonth.getMonth(),1).getDay(),numDays=new Date(shownMonth.getFullYear(),shownMonth.getMonth()+1,0).getDate();for(let d=1;d<=numDays;d++){const pos=first+d-1,row=Math.floor(pos/7),col=pos%7,cx=calX+colW*(col+.5),cy=calY+85+row*43,key=dateKey(new Date(shownMonth.getFullYear(),shownMonth.getMonth(),d));if(key===dateKey(selectedDate))rr(x,cx-16,cy-16,32,32,9,'#292a36');x.fillStyle=key===dateKey(selectedDate)?'#fff':col===0?'#d85c75':col===6?'#4979c6':'#2d2e39';x.font='20px Arial,"Noto Sans KR",sans-serif';x.fillText(String(d),cx,cy+7);if(calendarEvents[key]&&calendarEvents[key].length){x.beginPath();x.arc(cx,cy+14,2.6,0,Math.PI*2);x.fillStyle=key===dateKey(selectedDate)?'#fff':'#d789a3';x.fill();}}
    const rx=425,ry=270,rw=345,rh=330;rr(x,rx,ry,rw,rh,32,'rgba(32,31,45,.88)');x.fillStyle='#f5f3fa';x.font='bold 22px Arial,"Noto Sans KR",sans-serif';x.fillText('전체',rx+24,ry+36);x.font='30px Arial,sans-serif';x.textAlign='right';x.fillText('+',rx+rw-22,ry+36);x.textAlign='left';let evs=(calendarEvents[dateKey(selectedDate)]||[]).slice(0,4);x.font='18px Arial,"Noto Sans KR",sans-serif';if(!evs.length){x.fillStyle='#d8d5e0';x.textAlign='center';x.fillText('리마인더가 없습니다',rx+rw/2,ry+170);x.textAlign='left';}else evs.forEach((ev,i)=>{const yy=ry+84+i*55;x.beginPath();x.arc(rx+24,yy-5,5,0,Math.PI*2);x.fillStyle=['#d7b4f4','#f0a5bc','#8ac9bc','#7ea9ee'][i%4];x.fill();x.fillStyle='#f3f0f7';x.fillText(`${ev.time||'일정'}  ${(ev.title||'').slice(0,16)}`,rx+40,yy, rw-55);});
    const drawCircleApp=(cx,cy,bg,label,sub)=>{x.beginPath();x.arc(cx,cy,43,0,Math.PI*2);x.fillStyle='rgba(249,247,253,.75)';x.fill();x.beginPath();x.arc(cx,cy,32,0,Math.PI*2);x.fillStyle=bg;x.fill();x.fillStyle=label==='TALK'?'#302b07':'#fff';x.font='bold 16px Arial,sans-serif';x.textAlign='center';x.fillText(label,cx,cy+6);x.font='16px Arial,"Noto Sans KR",sans-serif';x.fillStyle='#f6f3fa';x.fillText(sub,cx,cy+67);};
    drawCircleApp(500,667,'#fee500','TALK','카카오톡');drawCircleApp(674,667,'#477bb5','✉','전체 계정');
-   rr(x,42,785,W-84,300,29,'rgba(252,249,253,.68)');x.fillStyle='#464553';x.textAlign='left';x.font='bold 18px Arial,"Noto Sans KR",sans-serif';x.fillText('seongun.office@meteora.kr',66,823);x.textAlign='right';x.font='27px Arial,sans-serif';x.fillText('▱   ↻',W-65,825);x.textAlign='center';x.fillStyle='#898594';x.font='22px Arial,"Noto Sans KR",sans-serif';x.fillText(($('greetingText').value||'오늘도 수고했어, 성운아 ✦').slice(0,38),W/2,947);x.textAlign='left';
+   rr(x,42,785,W-84,300,29,'rgba(252,249,253,.68)');x.fillStyle='#464553';x.textAlign='left';x.font='bold 18px Arial,"Noto Sans KR",sans-serif';x.fillText(siteConfig.emailAddress||'seongun.office@meteora.kr',66,823);x.textAlign='right';x.font='27px Arial,sans-serif';x.fillText('▱   ↻',W-65,825);x.textAlign='center';x.fillStyle='#898594';x.font='22px Arial,"Noto Sans KR",sans-serif';x.fillText((siteConfig.homeGreeting||'오늘도 수고했어, 성운아 ✦').slice(0,38),W/2,947);x.textAlign='left';
    x.fillStyle='rgba(255,255,255,.75)';for(let i=0;i<5;i++){rr(x,W/2-69+i*34,1326,i===3?17:9,3,3,i===3?'#fff':'rgba(255,255,255,.5)');}
    const dockApps=[['☎','#fff','#45407b'],['▤','#f1dce2','#cb8799'],['◎','#eaf0f4','#8295a7']];dockApps.forEach((a,i)=>{const cx=195+i*210,cy=1470;x.beginPath();x.arc(cx,cy,53,0,Math.PI*2);x.fillStyle='rgba(248,247,253,.78)';x.fill();x.beginPath();x.arc(cx,cy,37,0,Math.PI*2);x.fillStyle=a[1];x.fill();x.fillStyle=a[2];x.font='42px Arial,sans-serif';x.textAlign='center';x.fillText(a[0],cx,cy+14);});
    x.textAlign='center';x.fillStyle='#5f5969';x.font='28px Arial,sans-serif';x.fillText('Ⅲ                       ○                       ‹',W/2,1718);x.textAlign='left';
@@ -357,7 +786,17 @@ $('downloadBtn').addEventListener('click',async()=>{
   const a=document.createElement('a');a.download=`meteora-seongun-${activeMode}.png`;a.href=canvas.toDataURL('image/png');a.click();toast('현재 화면 이미지를 저장했어요.');
  }catch(e){toast('이미지 저장 중 오류가 발생했어요.');}
 });
-renderBuildings();setWallpaper();renderEditors();updateValues();renderHomeDashboard();setMode('lock');
+renderBuildings();
+applyWallpapers();setWallpaper();renderEditors();updateValues();renderHomeDashboard();updateChatBadges();loadWeather();setMode('lock');
+// Keep the simulated Galaxy clock live, using Korea Standard Time for the character's device.
+function updateLiveClock(){
+ const nowKst=new Date();const t=new Intl.DateTimeFormat('ko-KR',{hour:'2-digit',minute:'2-digit',hour12:false,timeZone:'Asia/Seoul'}).format(nowKst);
+ const d=new Intl.DateTimeFormat('ko-KR',{month:'long',day:'numeric',weekday:'long',timeZone:'Asia/Seoul'}).format(nowKst);
+ ['statusTime','homeClock','lockTime'].forEach(id=>{const el=$(id);if(el)el.textContent=t;});
+ const homeDate=$('homeDate'),lockDate=$('lockDate');if(homeDate)homeDate.textContent=d+' · 서울';if(lockDate)lockDate.textContent=d;
+}
+updateLiveClock();setInterval(updateLiveClock,15000);
+
 // Natural swipe-up / tap-to-unlock interaction, like a phone lock screen.
 const lock=$('lockView');
 if(lock){
